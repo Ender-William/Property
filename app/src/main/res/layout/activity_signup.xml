@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.Signup">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/dimen_25dp"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/Signup_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dimen_45dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:layout_marginLeft="@dimen/dimen_25dp"
+            android:layout_marginRight="@dimen/dimen_25dp"
+            android:fontFamily="@font/zh_blod"
+            android:gravity="left"
+            android:text="@string/Signup_title"
+            android:textColor="@color/ice_deep"
+            android:textSize="@dimen/dimen_40sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/signup_serverConf_btn"
+            android:layout_width="@dimen/dimen_45dp"
+            android:layout_height="@dimen/dimen_45dp"
+            android:layout_marginLeft="@dimen/dimen_25dp"
+            android:layout_marginRight="@dimen/dimen_25dp"
+            android:background="@drawable/server_emp"
+            android:layout_gravity="center_vertical"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/signup_username_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen_25dp"
+        android:layout_marginRight="@dimen/dimen_25dp"
+        android:layout_marginBottom="@dimen/dimen_10dp"
+        android:fontFamily="@font/zh_slim"
+        android:text="@string/Signup_username"
+        android:theme="@style/LoginTextColor"
+        android:textSize="@dimen/dimen_20sp"
+        app:layout_constraintBottom_toTopOf="@+id/signup_username_et" />
+
+    <EditText
+        android:id="@+id/signup_username_et"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_50dp"
+        android:layout_marginLeft="@dimen/dimen_25dp"
+        android:layout_marginRight="@dimen/dimen_25dp"
+        android:layout_marginBottom="@dimen/dimen_10dp"
+        android:fontFamily="@font/en_blod"
+        android:textColor="@color/ice_deep"
+        android:textSize="@dimen/dimen_20sp"
+        android:maxLines="1"
+        app:layout_constraintBottom_toTopOf="@+id/signup_passwd_tv" />
+
+    <TextView
+        android:id="@+id/signup_passwd_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen_25dp"
+        android:layout_marginRight="@dimen/dimen_25dp"
+        android:layout_marginBottom="@dimen/dimen_10dp"
+        android:fontFamily="@font/zh_slim"
+        android:text="@string/Signup_passwd"
+        android:theme="@style/LoginTextColor"
+        android:textSize="@dimen/dimen_20sp"
+        app:layout_constraintBottom_toTopOf="@+id/signup_passwd_et" />
+
+    <EditText
+        android:id="@+id/signup_passwd_et"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_50dp"
+        android:layout_marginLeft="@dimen/dimen_25dp"
+        android:layout_marginRight="@dimen/dimen_25dp"
+        android:layout_marginBottom="@dimen/dimen_10dp"
+        android:fontFamily="@font/en_blod"
+        android:textColor="@color/ice_deep"
+        android:textSize="@dimen/dimen_20sp"
+        android:maxLines="1"
+        app:layout_constraintBottom_toTopOf="@+id/signup_rePasswd_tv" />
+
+    <TextView
+        android:id="@+id/signup_rePasswd_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen_25dp"
+        android:layout_marginRight="@dimen/dimen_25dp"
+        android:layout_marginBottom="@dimen/dimen_10dp"
+        android:fontFamily="@font/zh_slim"
+        android:text="@string/Signup_checkPassed"
+        android:theme="@style/LoginTextColor"
+        android:textSize="@dimen/dimen_20sp"
+        app:layout_constraintBottom_toTopOf="@+id/signup_rePasswd_et" />
+
+    <EditText
+        android:id="@+id/signup_rePasswd_et"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_50dp"
+        android:layout_marginLeft="@dimen/dimen_25dp"
+        android:layout_marginRight="@dimen/dimen_25dp"
+        android:layout_marginBottom="@dimen/dimen_10dp"
+        android:fontFamily="@font/en_blod"
+        android:textColor="@color/ice_deep"
+        android:textSize="@dimen/dimen_20sp"
+        android:maxLines="1"
+        app:layout_constraintBottom_toTopOf="@+id/signup_name_tv" />
+
+    <TextView
+        android:id="@+id/signup_name_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen_25dp"
+        android:layout_marginRight="@dimen/dimen_25dp"
+        android:layout_marginBottom="@dimen/dimen_10dp"
+        android:fontFamily="@font/zh_slim"
+        android:text="@string/Signup_name"
+        android:theme="@style/LoginTextColor"
+        android:textSize="@dimen/dimen_20sp"
+        app:layout_constraintBottom_toTopOf="@+id/signup_name_et" />
+
+    <EditText
+        android:id="@+id/signup_name_et"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_50dp"
+        android:layout_marginLeft="@dimen/dimen_25dp"
+        android:layout_marginRight="@dimen/dimen_25dp"
+        android:layout_marginBottom="@dimen/dimen_10dp"
+        android:fontFamily="@font/zh_slim"
+        android:textColor="@color/ice_deep"
+        android:textSize="@dimen/dimen_20sp"
+        android:maxLines="1"
+        app:layout_constraintBottom_toTopOf="@+id/signup_email_tv" />
+
+    <TextView
+        android:id="@+id/signup_email_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen_25dp"
+        android:layout_marginRight="@dimen/dimen_25dp"
+        android:layout_marginBottom="@dimen/dimen_10dp"
+        android:fontFamily="@font/zh_slim"
+        android:text="@string/Signup_email"
+        android:theme="@style/LoginTextColor"
+        android:textSize="@dimen/dimen_20sp"
+        app:layout_constraintBottom_toTopOf="@+id/signup_email_et" />
+
+    <EditText
+        android:id="@+id/signup_email_et"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_50dp"
+        android:layout_marginLeft="@dimen/dimen_25dp"
+        android:layout_marginRight="@dimen/dimen_25dp"
+        android:layout_marginBottom="@dimen/dimen_15dp"
+        android:fontFamily="@font/en_blod"
+        android:textColor="@color/ice_deep"
+        android:textSize="@dimen/dimen_20sp"
+        android:maxLines="1"
+        app:layout_constraintBottom_toTopOf="@+id/signup_signup_btn" />
+
+    <Button
+        android:id="@+id/signup_signup_btn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_60dp"
+        android:layout_marginLeft="@dimen/dimen_25dp"
+        android:layout_marginRight="@dimen/dimen_25dp"
+        android:layout_marginBottom="@dimen/dimen_25dp"
+        android:background="@color/light_gray"
+        android:fontFamily="@font/zh_slim"
+        android:text="@string/Signup_title"
+        android:textColor="@color/ice_deep"
+        android:textSize="@dimen/dimen_30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

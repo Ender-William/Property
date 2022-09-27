@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@style/AppThemes"
+    tools:context=".activity.Welcome">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/dimen_25dp"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/welcome_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dimen_45dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:layout_marginLeft="@dimen/dimen_25dp"
+            android:layout_marginRight="@dimen/dimen_25dp"
+            android:fontFamily="@font/zh_blod"
+            android:gravity="left"
+            android:text="@string/WelcomePage_title"
+            android:textColor="@color/ice_deep"
+            android:textSize="@dimen/dimen_40sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/welcome_serverConf_btn"
+            android:layout_width="@dimen/dimen_45dp"
+            android:layout_height="@dimen/dimen_45dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/dimen_25dp"
+            android:layout_marginRight="@dimen/dimen_25dp"
+            android:background="@drawable/server_emp"
+            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/welcome_banner_iv"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_300dp"
+        android:layout_marginLeft="@dimen/dimen_25dp"
+        android:layout_marginRight="@dimen/dimen_25dp"
+        android:layout_marginBottom="@dimen/dimen_60dp"
+        android:src="@drawable/welcome_banner"
+        app:layout_constraintBottom_toTopOf="@+id/welcome_login_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <Button
+        android:id="@+id/welcome_login_btn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_60dp"
+        android:layout_marginLeft="@dimen/dimen_25dp"
+        android:layout_marginRight="@dimen/dimen_25dp"
+        android:layout_marginBottom="@dimen/dimen_25dp"
+        android:background="@color/light_gray"
+        android:fontFamily="@font/zh_slim"
+        android:text="@string/univer_login"
+        android:textColor="@color/ice_deep"
+        android:textSize="@dimen/dimen_30sp"
+        app:layout_constraintBottom_toTopOf="@+id/welcome_signup_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <Button
+        android:id="@+id/welcome_signup_btn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_60dp"
+        android:layout_marginLeft="@dimen/dimen_25dp"
+        android:layout_marginRight="@dimen/dimen_25dp"
+        android:layout_marginBottom="@dimen/dimen_25dp"
+        android:background="@color/light_gray"
+        android:fontFamily="@font/zh_slim"
+        android:text="@string/univer_signup"
+        android:textColor="@color/ice_deep"
+        android:textSize="@dimen/dimen_30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

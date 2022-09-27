@@ -1,0 +1,88 @@
+<resources>
+    <string name="app_name">Property</string>
+
+    <!--  Universally  -->
+    <string name="univer_login">登录</string>
+    <string name="univer_signup">注册</string>
+
+    <!--  Warning  -->
+    <string name="Warning_usernameIsEmpty">用户名不能为空</string>
+    <string name="Warning_passwordIsEmpty">密码不能为空</string>
+    <string name="Warning_pleaseCheckNet">请检查网络状态</string>
+    <string name="Warning_pleaseSetUpServerAddr">请设置服务器地址</string>
+    <string name="Warning_pleaseSetUpServerPort">请设置服务器端口号</string>
+    <string name="Warning_serverConfLoadFinish">服务器设置加载完毕</string>
+    <string name="Warning_pleaseCheckisEmpty">请检查项目是否为空</string>
+    <string name="Warning_saveFinish">保存完成</string>
+    <string name="Warning_loginSuccess">登录成功</string>
+    <string name="Warning_loginFail">登录失败</string>
+    <string name="Warning_userLogout">账号已注销</string>
+    <string name="Warning_apiError">API 接口错误</string>
+    <string name="Warning_passwordNotSame">密码不一致</string>
+    <string name="Warning_nameIsEmpty">姓名为空</string>
+    <string name="Warning_email">邮箱为空</string>
+    <string name="Warning_userExist">用户已注册</string>
+    <string name="Warning_successRegister">成功注册</string>
+
+    <!--  Welcome Page  -->
+    <string name="WelcomePage_title">欢迎使用物资管理系统</string>
+
+    <!--  Login Page  -->
+    <string name="LoginPage_title">登录</string>
+    <string name="LoginPage_username">用户名</string>
+    <string name="LoginPage_password">密码</string>
+    <string name="LoginPage_serverAddress">服务器地址</string>
+    <string name="LoginPage_serverAddSample">e.g. http://xxx.xxx.com/</string>
+
+    <!--  SignUp Page  -->
+    <string name="Signup_title">注册</string>
+    <string name="Signup_username">用户名「学号」</string>
+    <string name="Signup_passwd">密码</string>
+    <string name="Signup_checkPassed">检查密码</string>
+    <string name="Signup_name">姓名</string>
+    <string name="Signup_age">年龄</string>
+    <string name="Signup_stuId">学号</string>
+    <string name="Signup_phone">手机号</string>
+    <string name="Signup_email">邮件</string>
+    <string name="Signup_nickname">昵称</string>
+
+    <!--  Server Conf Page  -->
+    <string name="ServerConf_title">服务器地址设置</string>
+    <string name="ServerConf_ServerAddress">服务器地址</string>
+    <string name="ServerConf_ServerPort">服务器端口号</string>
+    <string name="ServerConf_serverAddSample">e.g. http://xxx.xxx.com</string>
+    <string name="ServerConf_defaultPort">Default Port: 12256/</string>
+
+    <!--  QRScan Page  -->
+    <string name="QRScan_VolumeUpKeyToUseFlash">音量上键开启闪光灯</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--  Home Page  -->
+    <string name="HomePage_Title">欢迎</string>
+    <string name="HomePage_WelcomUserInstead">请登录</string>
+
+    <!--  Category Items  -->
+    <string name="Category_TotalCate">子类总数：</string>
+    <string name="Category_TotalSonItem">总库存数：</string>
+
+    <!-- Operate( Lend/Return ) Page  -->
+    <string name="Operate_FatherItemName">所属分类</string>
+    <string name="Operate_Inventory">剩余</string>
+    <string name="Operate_LendTitle">出借配置</string>
+    <string name="Operate_ReturnTitle">归还配置</string>
+    <string name="Operate_LendOut">借出</string>
+    <string name="Operate_ReturnIn">归还</string>
+    <string name="Operate_DefaultItemName">请扫码</string>
+    <string name="Operate_DefaultCate">无分类，请扫码</string>
+    <string name="Operate_DefaultNumber">0</string>
+    <string name="Operate_Scan">扫码</string>
+    <string name="Operate_ConfirmOperate">确认</string>
+
+    <!--  Me Page  -->
+    <string name="Me_Title">个人中心</string>
+    <string name="Me_NotReturn">尚未归还</string>
+    <string name="Me_OperateRecode">历史记录</string>
+    <string name="Me_Preference">更多设置</string>
+    
+</resources>

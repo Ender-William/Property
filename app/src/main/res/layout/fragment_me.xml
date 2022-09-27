@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.MeFragment"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_80dp"
+        android:background="@color/sand_blue"
+        android:text="@string/Me_Title"
+        android:fontFamily="@font/zh_blod"
+        android:textSize="@dimen/dimen_30sp"
+        android:textColor="@color/ice_deep"
+        android:gravity="center_vertical|center_horizontal"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_220dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="@dimen/dimen_180dp"
+            android:layout_height="@dimen/dimen_180dp"
+            android:layout_marginTop="@dimen/dimen_20dp"
+            android:layout_marginBottom="@dimen/dimen_20dp"
+            android:layout_marginLeft="@dimen/dimen_10dp"
+            android:src="@mipmap/user_chihiro"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_180dp"
+            android:layout_marginLeft="@dimen/dimen_10dp"
+            android:layout_marginRight="@dimen/dimen_10dp"
+            android:layout_marginTop="@dimen/dimen_20dp"
+            android:layout_marginBottom="@dimen/dimen_20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_130dp"
+                android:text="你的姓名"
+                android:fontFamily="@font/zh_slim"
+                android:textSize="@dimen/dimen_30sp"
+                android:textColor="@color/ice_deep"
+                android:gravity="left|bottom"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_50dp"
+                android:text="2004010117"
+                android:fontFamily="@font/en_blod"
+                android:textSize="20sp"
+                android:textColor="@color/ice_deep"
+                android:gravity="left|center_vertical"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_3px"
+        android:layout_marginLeft="@dimen/dimen_10dp"
+        android:layout_marginRight="@dimen/dimen_10dp"
+        android:background="@color/ice_deep"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_70dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="@dimen/dimen_25dp"
+            android:layout_height="@dimen/dimen_40dp"
+            android:layout_marginLeft="@dimen/dimen_10dp"
+            android:layout_marginRight="@dimen/dimen_10dp"
+            android:layout_marginTop="@dimen/dimen_15dp"
+            android:layout_marginBottom="@dimen/dimen_15dp"
+            android:src="@mipmap/notreturn_deep"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dimen_40dp"
+            android:layout_weight="1"
+            android:layout_marginRight="@dimen/dimen_10dp"
+            android:layout_gravity="center_vertical"
+            android:text="@string/Me_NotReturn"
+            android:textSize="@dimen/dimen_25sp"
+            android:textColor="@color/ice_deep"
+            android:fontFamily="@font/zh_slim"
+            android:gravity="center_vertical"/>
+
+        <ImageView
+            android:layout_width="@dimen/dimen_20dp"
+            android:layout_height="@dimen/dimen_40dp"
+            android:layout_marginRight="@dimen/dimen_10dp"
+            android:src="@mipmap/arrows_right"
+            android:layout_gravity="center_vertical"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_3px"
+        android:layout_marginLeft="@dimen/dimen_10dp"
+        android:layout_marginRight="@dimen/dimen_10dp"
+        android:background="@color/ice_blue"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_70dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="@dimen/dimen_25dp"
+            android:layout_height="@dimen/dimen_40dp"
+            android:layout_marginLeft="@dimen/dimen_10dp"
+            android:layout_marginRight="@dimen/dimen_10dp"
+            android:layout_marginTop="@dimen/dimen_15dp"
+            android:layout_marginBottom="@dimen/dimen_15dp"
+            android:src="@mipmap/history_deep"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dimen_40dp"
+            android:layout_weight="1"
+            android:layout_marginRight="@dimen/dimen_10dp"
+            android:layout_gravity="center_vertical"
+            android:text="@string/Me_OperateRecode"
+            android:textSize="@dimen/dimen_25sp"
+            android:textColor="@color/ice_deep"
+            android:fontFamily="@font/zh_slim"
+            android:gravity="center_vertical"/>
+
+        <ImageView
+            android:layout_width="@dimen/dimen_20dp"
+            android:layout_height="@dimen/dimen_40dp"
+            android:layout_marginRight="@dimen/dimen_10dp"
+            android:src="@mipmap/arrows_right"
+            android:layout_gravity="center_vertical"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_3px"
+        android:layout_marginLeft="@dimen/dimen_10dp"
+        android:layout_marginRight="@dimen/dimen_10dp"
+        android:background="@color/ice_blue"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_70dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="@dimen/dimen_25dp"
+            android:layout_height="@dimen/dimen_40dp"
+            android:layout_marginLeft="@dimen/dimen_10dp"
+            android:layout_marginRight="@dimen/dimen_10dp"
+            android:layout_marginTop="@dimen/dimen_15dp"
+            android:layout_marginBottom="@dimen/dimen_15dp"
+            android:src="@mipmap/setting_deep"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dimen_40dp"
+            android:layout_weight="1"
+            android:layout_marginRight="@dimen/dimen_10dp"
+            android:layout_gravity="center_vertical"
+            android:text="@string/Me_Preference"
+            android:textSize="@dimen/dimen_25sp"
+            android:textColor="@color/ice_deep"
+            android:fontFamily="@font/zh_slim"
+            android:gravity="center_vertical"/>
+
+        <ImageView
+            android:layout_width="@dimen/dimen_20dp"
+            android:layout_height="@dimen/dimen_40dp"
+            android:layout_marginRight="@dimen/dimen_10dp"
+            android:src="@mipmap/arrows_right"
+            android:layout_gravity="center_vertical"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_3px"
+        android:layout_marginLeft="@dimen/dimen_10dp"
+        android:layout_marginRight="@dimen/dimen_10dp"
+        android:background="@color/ice_deep"/>
+
+</LinearLayout>
