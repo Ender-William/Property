@@ -6,7 +6,8 @@
     android:layout_marginRight="@dimen/dimen_5dp"
     android:layout_height="@dimen/dimen_270dp"
     android:background="@color/sand_blue"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:id="@+id/category_layout">
 
     <ImageView
         android:id="@+id/Category_Img_iv"
