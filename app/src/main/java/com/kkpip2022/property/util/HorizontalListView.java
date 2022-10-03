@@ -16,7 +16,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 // https://blog.csdn.net/shaoyezhangliwei/article/details/79441799
-// 本类由 CSDN 博主提供，感谢这位博主的贡献与付出
+// HorizontalListView 由 CSDN 博主提供，感谢这位博主的贡献与付出
 
 public class HorizontalListView extends AdapterView<ListAdapter> {
 
@@ -85,12 +85,12 @@ public class HorizontalListView extends AdapterView<ListAdapter> {
             invalidate();
             requestLayout();
         }
-
     };
     public boolean onInterceptTouchEvent(MotionEvent ev) {
         getParent().requestDisallowInterceptTouchEvent(true);
         return mGesture.onTouchEvent(ev);
-    };
+    }
+
     @Override
     public ListAdapter getAdapter() {
         return mAdapter;
@@ -179,7 +179,6 @@ public class HorizontalListView extends AdapterView<ListAdapter> {
                     requestLayout();
                 }
             });
-
         }
     }
 
@@ -197,8 +196,6 @@ public class HorizontalListView extends AdapterView<ListAdapter> {
             edge = child.getLeft();
         }
         fillListLeft(edge, dx);
-
-
     }
 
     private void fillListRight(int rightEdge, final int dx) {
@@ -217,7 +214,6 @@ public class HorizontalListView extends AdapterView<ListAdapter> {
             }
             mRightViewIndex++;
         }
-
     }
 
     private void fillListLeft(int leftEdge, final int dx) {
@@ -238,7 +234,6 @@ public class HorizontalListView extends AdapterView<ListAdapter> {
             removeViewInLayout(child);
             mLeftViewIndex++;
             child = getChildAt(0);
-
         }
 
         child = getChildAt(getChildCount()-1);
@@ -281,7 +276,6 @@ public class HorizontalListView extends AdapterView<ListAdapter> {
             mScroller.fling(mNextX, 0, (int)-velocityX, 0, 0, mMaxX, 0, 0);
         }
         requestLayout();
-
         return true;
     }
 

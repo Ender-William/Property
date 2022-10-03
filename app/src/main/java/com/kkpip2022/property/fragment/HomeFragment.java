@@ -12,12 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.BaseAdapter;
-import android.widget.LinearLayout;
-import android.widget.ListView;
-import android.widget.ScrollView;
 import android.widget.SimpleAdapter;
-import android.widget.TextView;
 
 import com.kkpip2022.property.R;
 import com.kkpip2022.property.util.HorizontalListView;
@@ -49,11 +44,31 @@ public class HomeFragment extends BaseFragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_home,container,false);
+
+        // 绑定 Horizontal ListView 控件
+        // 这个类是由网上的开发者贡献的，我只是拿来是用
+        // 这个类目前有些问题，就是加载的 Layout 文件的 Width 是处于失效的状态
+        // 不知道是因为我嵌套在 HorizonScrollView 中的问题还是本身的问题
+        // 不过无伤大雅，可以使用
         HorizonListView_lv = view.findViewById(R.id.home_horizontalListView);
+
+        // 设置 「目录、分类、总库存」 Horizontal ListView 动态加载数据
+        // 需要先绑定控件、适配器，数据获取器以及Item点击后的响应方法
+
+        // 设置适配器 Adapter，因为在 Fragment 中，需要使用 getActivity 方法
+        // getData 部分是用来获取数据的
+        // 然后设置目标 Item 布局，并将需要动态加载的控件加入一个 ArrayList中
+        // 将 ArrayList 中的控件与 String[] 中的命名一一对应
+        // 后面再往 List>>Map 中添加数据时，只需要对应名字绑定数据即可
         CateAdapter = new SimpleAdapter(getActivity(),getData(),
                 R.layout.category_name,new String[]{"title","sonNum","totalItem"},
                 new int[]{R.id.Category_ItemTitle_tv,R.id.Category_TotalCate_tv,R.id.Category_TotalSonItem_tv});
+
+        // 设置适配器
         HorizonListView_lv.setAdapter(CateAdapter);
+
+        // 设置点击操作，在旧版本的 Android 开发中，setOnItemClickListener
+        // 后面的参数只需要设置 this 即可，这个是新版本的，需要使用 this::onItemClick
         HorizonListView_lv.setOnItemClickListener(this::onItemClick);
         // Inflate the layout for this fragment
         return view;
