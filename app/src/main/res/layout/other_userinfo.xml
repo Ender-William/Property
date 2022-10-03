@@ -27,9 +27,10 @@
             android:layout_marginTop="@dimen/dimen_5dp"
             android:orientation="horizontal">
             <TextView
+                android:id="@+id/userinfo_username_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="张三"
+                android:text="NAN"
                 android:fontFamily="@font/zh_blod"
                 android:textSize="@dimen/dimen_25sp"
                 android:textColor="@color/ice_deep"
@@ -42,6 +43,7 @@
             android:layout_height="@dimen/dimen_30dp"
             android:orientation="horizontal">
             <TextView
+                android:id="@+id/userinfo_email_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:text="ThisIsATestEmail@xxx.com"
