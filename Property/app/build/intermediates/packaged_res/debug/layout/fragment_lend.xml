@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.LendFragment"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_80dp"
+        android:background="@color/sand_blue"
+        android:text="@string/Operate_LendTitle"
+        android:fontFamily="@font/zh_blod"
+        android:textSize="@dimen/dimen_30sp"
+        android:textColor="@color/ice_deep"
+        android:gravity="center_vertical|center_horizontal"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_200dp"
+        android:layout_marginLeft="@dimen/dimen_10dp"
+        android:layout_marginRight="@dimen/dimen_10dp"
+        android:layout_marginTop="@dimen/dimen_10dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="@dimen/dimen_200dp"
+            android:layout_height="@dimen/dimen_200dp"
+            android:layout_marginTop="@dimen/dimen_10dp"
+            android:layout_marginBottom="@dimen/dimen_10dp"
+            android:src="@drawable/img_instead"
+            android:layout_gravity="center_vertical|left"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dimen_5dp"
+            android:layout_marginTop="@dimen/dimen_10dp"
+            android:layout_marginBottom="@dimen/dimen_10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:text="@string/Operate_DefaultItemName"
+                android:fontFamily="@font/en_blod"
+                android:textSize="@dimen/dimen_25sp"
+                android:maxLines="1"
+                android:textColor="@color/ice_deep"
+                android:gravity="center_vertical|center_horizontal"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:src="@drawable/barcode_wild"
+                android:layout_gravity="center_vertical|center_horizontal"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_3px"
+        android:background="@color/ice_deep"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_50dp"
+        android:layout_marginLeft="@dimen/dimen_10dp"
+        android:layout_marginRight="@dimen/dimen_10dp"
+        android:layout_marginTop="@dimen/dimen_10dp"
+        android:layout_marginBottom="@dimen/dimen_10dp"
+        android:src="@drawable/barcode_slim"
+        android:layout_gravity="center_vertical|center_horizontal"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_3px"
+        android:layout_marginLeft="@dimen/dimen_10dp"
+        android:layout_marginRight="@dimen/dimen_10dp"
+        android:background="@color/ice_deep"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_70dp"
+        android:layout_marginLeft="@dimen/dimen_10dp"
+        android:layout_marginRight="@dimen/dimen_10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dimen_50dp"
+            android:layout_marginLeft="@dimen/dimen_10dp"
+            android:layout_marginRight="@dimen/dimen_10dp"
+            android:layout_gravity="center_vertical"
+            android:text="@string/Operate_FatherItemName"
+            android:fontFamily="@font/en_blod"
+            android:textSize="@dimen/dimen_25sp"
+            android:textColor="@color/ice_deep"
+            android:gravity="center_vertical|left"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="@dimen/dimen_50dp"
+            android:layout_marginLeft="@dimen/dimen_5dp"
+            android:layout_marginRight="@dimen/dimen_10dp"
+            android:text="@string/Operate_DefaultCate"
+            android:maxLines="1"
+            android:fontFamily="@font/en_blod"
+            android:textColor="@color/ice_deep"
+            android:textSize="@dimen/dimen_20sp"
+            android:gravity="center_vertical|right"
+            android:layout_gravity="center_vertical|left"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_3px"
+        android:layout_marginLeft="@dimen/dimen_10dp"
+        android:layout_marginRight="@dimen/dimen_10dp"
+        android:background="@color/ice_deep"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_70dp"
+        android:layout_marginLeft="@dimen/dimen_10dp"
+        android:layout_marginRight="@dimen/dimen_10dp"
+        android:layout_marginTop="@dimen/dimen_10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dimen_50dp"
+            android:layout_marginLeft="@dimen/dimen_10dp"
+            android:layout_marginRight="20dp"
+            android:text="@string/Operate_LendOut"
+            android:fontFamily="@font/en_blod"
+            android:textSize="@dimen/dimen_25sp"
+            android:textColor="@color/ice_deep"
+            android:layout_gravity="center_vertical|left"
+            android:gravity="center_vertical|center"/>
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="@dimen/dimen_50dp"
+            android:inputType="number"
+            android:textSize="@dimen/dimen_25sp"
+            android:textColor="@color/ice_deep"
+            android:hint="@string/Operate_DefaultNumber"
+            android:fontFamily="@font/en_blod"
+            android:gravity="right"
+            android:textColorHint="@color/light_gray"
+            android:layout_gravity="center_vertical|left"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dimen_50dp"
+            android:layout_gravity="center_vertical"
+            android:text="/0000"
+            android:fontFamily="@font/en_blod"
+            android:textSize="@dimen/dimen_30sp"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_3px"
+        android:layout_marginLeft="@dimen/dimen_10dp"
+        android:layout_marginRight="@dimen/dimen_10dp"
+        android:background="@color/ice_deep"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_70dp"
+        android:layout_marginTop="@dimen/dimen_10dp"
+        android:layout_marginLeft="@dimen/dimen_10dp"
+        android:layout_marginRight="@dimen/dimen_10dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/lend_qrScan_btn"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="@dimen/dimen_70dp"
+            android:layout_marginLeft="@dimen/dimen_10dp"
+            android:layout_marginRight="@dimen/dimen_10dp"
+            android:text="@string/Operate_Scan"
+            android:textColor="@color/ice_deep"
+            android:textSize="@dimen/dimen_25sp"/>
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="@dimen/dimen_70dp"
+            android:layout_marginLeft="@dimen/dimen_10dp"
+            android:layout_marginRight="@dimen/dimen_10dp"
+            android:text="@string/Operate_ConfirmOperate"
+            android:textColor="@color/ice_deep"
+            android:textSize="@dimen/dimen_25sp"/>
+
+    </LinearLayout>
+
+</LinearLayout>

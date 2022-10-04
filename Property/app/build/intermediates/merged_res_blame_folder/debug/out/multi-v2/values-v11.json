@@ -1,0 +1,20 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.kkpip2022.property.app-mergeDebugResources-30:/values-v11/values-v11.xml",
+            "map": [
+                {
+                    "source": "/Users/william/.gradle/caches/transforms-3/8bc7a597eda30428e1f1648602e201b3/transformed/jetified-zxing-android-embedded-3.5.0/res/values-v11/values-v11.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "3",
+                        "endColumns": "10",
+                        "endOffsets": "150"
+                    }
+                }
+            ]
+        }
+    ]
+}

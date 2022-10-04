@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.ServerConf">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/dimen_25dp"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/ServerConf_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dimen_45dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:layout_marginLeft="@dimen/dimen_25dp"
+            android:layout_marginRight="@dimen/dimen_25dp"
+            android:fontFamily="@font/zh_blod"
+            android:gravity="left"
+            android:text="@string/ServerConf_title"
+            android:textColor="@color/ice_deep"
+            android:textSize="@dimen/dimen_40sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/ServerConf_saveConf_btn"
+            android:layout_width="@dimen/dimen_45dp"
+            android:layout_height="@dimen/dimen_45dp"
+            android:layout_marginLeft="@dimen/dimen_25dp"
+            android:background="@drawable/save_fill"
+            android:layout_gravity="center_vertical"/>
+
+        <Button
+            android:id="@+id/ServerConf_back_btn"
+            android:layout_width="@dimen/dimen_45dp"
+            android:layout_height="@dimen/dimen_45dp"
+            android:layout_marginLeft="@dimen/dimen_25dp"
+            android:layout_marginRight="@dimen/dimen_25dp"
+            android:background="@drawable/back_fill"
+            android:layout_gravity="center_vertical"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/welcome_banner_iv"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_300dp"
+        android:layout_marginLeft="@dimen/dimen_25dp"
+        android:layout_marginRight="@dimen/dimen_25dp"
+        android:layout_marginBottom="@dimen/dimen_60dp"
+        android:theme="@style/ServerConfBanner"
+        app:layout_constraintBottom_toTopOf="@+id/serverconf_serveraddr_tv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/serverconf_serveraddr_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen_25dp"
+        android:layout_marginRight="@dimen/dimen_25dp"
+        android:layout_marginBottom="@dimen/dimen_10dp"
+        android:fontFamily="@font/zh_slim"
+        android:text="@string/ServerConf_ServerAddress"
+        android:theme="@style/LoginTextColor"
+        android:textSize="@dimen/dimen_20sp"
+        app:layout_constraintBottom_toTopOf="@+id/serverconf_serveraddr_et"/>
+
+    <EditText
+        android:id="@+id/serverconf_serveraddr_et"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_50dp"
+        android:layout_marginLeft="@dimen/dimen_25dp"
+        android:layout_marginRight="@dimen/dimen_25dp"
+        android:layout_marginBottom="@dimen/dimen_10dp"
+        android:fontFamily="@font/en_blod"
+        android:textColor="@color/ice_deep"
+        android:hint="@string/ServerConf_serverAddSample"
+        android:textSize="@dimen/dimen_20sp"
+        app:layout_constraintBottom_toTopOf="@+id/serverconf_port_tv" />
+
+    <TextView
+        android:id="@+id/serverconf_port_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen_25dp"
+        android:layout_marginRight="@dimen/dimen_25dp"
+        android:layout_marginBottom="@dimen/dimen_10dp"
+        android:fontFamily="@font/zh_slim"
+        android:text="@string/ServerConf_ServerPort"
+        android:theme="@style/LoginTextColor"
+        android:textSize="@dimen/dimen_20sp"
+        app:layout_constraintBottom_toTopOf="@+id/serverconf_port_et" />
+
+    <EditText
+        android:id="@+id/serverconf_port_et"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_50dp"
+        android:layout_marginLeft="@dimen/dimen_25dp"
+        android:layout_marginRight="@dimen/dimen_25dp"
+        android:layout_marginBottom="@dimen/dimen_45dp"
+        android:fontFamily="@font/en_blod"
+        android:textColor="@color/ice_deep"
+        android:hint="@string/ServerConf_defaultPort"
+        android:textSize="@dimen/dimen_20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

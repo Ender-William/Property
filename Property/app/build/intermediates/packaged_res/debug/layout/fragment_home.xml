@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.HomeFragment"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/HomeLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_70dp"
+        android:layout_marginTop="@dimen/dimen_25dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical|left">
+
+        <TextView
+            android:id="@+id/home_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dimen_50dp"
+            android:layout_marginLeft="@dimen/dimen_25dp"
+            android:layout_marginRight="@dimen/dimen_15dp"
+            android:text="@string/HomePage_Title"
+            android:textSize="@dimen/dimen_40sp"
+            android:fontFamily="@font/zh_blod"
+            android:textColor="@color/ice_deep"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dimen_50dp"
+            android:layout_marginRight="@dimen/dimen_25dp"
+            android:layout_weight="1"
+            android:text="@string/HomePage_WelcomUserInstead"
+            android:fontFamily="@font/zh_blod"
+            android:textColor="@color/ice_deep"
+            android:textSize="@dimen/dimen_40sp"/>
+
+    </LinearLayout>
+
+    <HorizontalScrollView
+        android:id="@+id/home_cate_hsv"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_300dp"
+        android:fillViewport="true"
+        android:layout_below="@+id/HomeLinearLayout"
+        android:layout_marginTop="@dimen/dimen_5dp">
+
+        <com.kkpip2022.property.util.HorizontalListView
+            android:id="@+id/home_horizontalListView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_270dp"
+            android:layout_marginTop="@dimen/dimen_5dp"
+            android:layout_marginLeft="@dimen/dimen_5dp"
+            android:layout_marginRight="@dimen/dimen_5dp"
+            android:layout_marginBottom="@dimen/dimen_5dp"
+            android:background="@color/middle_gray"
+            android:layout_gravity="center_vertical">
+
+        </com.kkpip2022.property.util.HorizontalListView>
+
+    </HorizontalScrollView>
+
+    <ScrollView
+        android:id="@+id/home_user_vsv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        android:layout_below="@+id/home_cate_hsv"
+        android:layout_marginTop="@dimen/dimen_5dp">
+
+        <ListView
+            android:id="@+id/home_verticalListView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/dimen_5dp"
+            android:layout_marginLeft="@dimen/dimen_5dp"
+            android:layout_marginRight="@dimen/dimen_5dp"
+            android:layout_marginBottom="@dimen/dimen_5dp"
+            android:layout_gravity="center_horizontal">
+
+        </ListView>
+
+    </ScrollView>
+
+</LinearLayout>
