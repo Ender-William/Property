@@ -1,6 +1,6 @@
 // 处理用户相关的数据
 const { SuccessModel } = require("../model/responseModel");
-const { getList, login, finduser, register} = require('../controllers/process')
+const { getList, login, finduser, register, getUserInfoDetail, getCateInfo} = require('../controllers/process')
 const handleProcessRoute = (req, res) => {
     // 定义处理路由的逻辑
 
@@ -32,6 +32,16 @@ const handleProcessRoute = (req, res) => {
         });
     }
 
+    // 获取用户的详细信息
+    if (method === 'POST' && req.path === '/api/userinfo') {
+        const stuID = req.query.stuID || '';
+        const listDataPromise = getUserInfoDetail(stuID);
+        return listDataPromise.then((listData) => {
+            // console.log(listData);
+            return new SuccessModel(listData);
+        });
+    }
+
     // 注册处理
     if (method === 'POST' && req.path === '/api/register') {
         const stuID = req.query.stuID || '';
@@ -46,9 +56,14 @@ const handleProcessRoute = (req, res) => {
         });
     }
 
-    //
+    // 获取 类别及其信息
     if (method === 'POST' && req.path === '/api/getcargoinfo') {
-``      // /api/getcargoinfo?
+``      // /api/getcargoinfo?authority={$authority}
+        const listDataPromise = getCateInfo();
+        return listDataPromise.then((listData) => {
+            // console.log(listData);
+            return new SuccessModel(listData);
+        });
     }
 
 }

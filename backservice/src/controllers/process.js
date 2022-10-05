@@ -1,7 +1,4 @@
-const sqlMap = require('../db_services/sqlMap');
-const tokenRandom = require('../db_services/randomString');
-const {json} = require("express");
-const {execSQL} = require('../db_services/mysqlService')
+const {execSQL,execMultiSQL} = require('../db_services/mysqlService')
 
 const login = (stuID, passwd) => {
     // 登录时的业务逻辑
@@ -13,14 +10,14 @@ const login = (stuID, passwd) => {
     if (passwd) {
         sql += `and passwd='${passwd}' `;
     }
-    if (execSQL(sql)) {
-        execSQL(sql).then((data) => {
+    sqlresult = execSQL(sql);
+    if (sqlresult) {
+        sqlresult.then((data) => {
             console.log(data);
         })
     }
     return execSQL(sql);
 }
-
 
 const finduser = (stuID) => {
     // 查询用户是否存在
@@ -51,6 +48,32 @@ const register = (stuID, passwd, stuName, email) => {
     return finduser(stuID);
 }
 
+const getUserInfoDetail = (stuID) => {
+    // 获取用户账号信息
+    let sql = `select * from userinfoTB where`;
+    if (stuID) {
+        sql += ` stuID='${stuID}'`;
+    }
+    sqlresult = execSQL(sql);
+    if (sqlresult) {
+        sqlresult.then((data) => {
+            console.log(data);
+        })
+    }
+    return sqlresult;
+}
+
+const getCateInfo = () => {
+    // 调取 cargoinfoTB 中 Category Detail Info 的全部信息
+    let sql = `SELECT * FROM cargoinfoTB`;
+    sqlresult = execMultiSQL(sql);
+    if (sqlresult) {
+        sqlresult.then((data) => {
+            console.log(data);
+        })
+    }
+    return sqlresult;
+}
 
 const getList = (stuID, passwd, token) => {
     // 从数据库获得数据
@@ -68,10 +91,11 @@ const getList = (stuID, passwd, token) => {
     ]
 }
 
-
 module.exports = {
     getList,
     login,
     finduser,
     register,
+    getUserInfoDetail,
+    getCateInfo,
 }
