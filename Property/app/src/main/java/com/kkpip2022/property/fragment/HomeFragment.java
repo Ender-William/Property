@@ -1,6 +1,5 @@
 package com.kkpip2022.property.fragment;
 
-import android.content.Context;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -15,7 +14,14 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 
+import com.google.gson.Gson;
 import com.kkpip2022.property.R;
+import com.kkpip2022.property.api.Api;
+import com.kkpip2022.property.api.ApiConfig;
+import com.kkpip2022.property.api.SharedPreferenceDefault;
+import com.kkpip2022.property.api.TtitCallback;
+import com.kkpip2022.property.entity.CategoryItemDetail;
+import com.kkpip2022.property.entity.CategoryResponse;
 import com.kkpip2022.property.util.HorizontalListView;
 
 import java.util.ArrayList;
@@ -36,6 +42,8 @@ public class HomeFragment extends BaseFragment {
     HorizontalListView HorizonListView_lv;
 
     ListView VerticalListView_lv;
+
+    private List<Map<String,Object>> CateItem = new ArrayList<>();
 
     // TODO: Rename and change types and number of parameters
     public static HomeFragment newInstance() {
@@ -96,22 +104,72 @@ public class HomeFragment extends BaseFragment {
 
     // 加载数据并以 List 形式向 Horizontal ListView 提供数据
     private List<Map<String, Object>> HLVgetData() {
-        String[] CateTitles = {"这是一个总类","这是一个总类2"};
-        String[] CateItem = {"10000","125"};
-        String[] CateTotal = {"123333345","166658"};
-        List<Map<String,Object>> list = new ArrayList<>();
-        for (int i=0;i < CateTitles.length;i++) {
-            Map map = new HashMap();
-            map.put("title",CateTitles[i]);
-            map.put("sonNum",CateItem[i]);
-            map.put("totalItem",CateTotal[i]);
-            list.add(map);
-        }
-        return list;
+
+        HashMap<String, Object> params = new HashMap<String, Object>();
+        params.put("authority","admin");
+
+        // 获取 网站地址
+        String BaseURL = GetStringSharedPreferencesContains(
+                SharedPreferenceDefault.SharedPreferenceSysConfName,
+                SharedPreferenceDefault.SharedPreferenceSysConfServerAdd
+        );
+
+        // 获取 网站地址对应的 端口号
+        String ServerPort = GetStringSharedPreferencesContains(
+                SharedPreferenceDefault.SharedPreferenceSysConfName,
+                SharedPreferenceDefault.SharedPreferenceSysConfServerPort
+        );
+
+        // 传参部分代码
+        String ExtURL = "authority=" + "admin";
+
+        Api.config(BaseURL, ServerPort, ApiConfig.HOME_CATEDETAIL, ExtURL, params).postRequest(new TtitCallback() {
+            @Override
+            public void onSuccess(String res) {
+
+                Log.e("connection success:", res);
+
+                Gson gson = new Gson();
+                CategoryResponse categoryResponse = gson.fromJson(res, CategoryResponse.class);
+                if (categoryResponse.getData() != null) {
+                    // 如果 data 项有数据
+                    List<String> CategoryResponse = categoryResponse.getData();
+                    for (int i = 0; i < CategoryResponse.size(); i++) {
+                        String TempData = (String) String.valueOf(CategoryResponse.get(i));
+                        CategoryItemDetail categoryItemDetail = gson.fromJson(TempData,CategoryItemDetail.class);
+                        Map map = new HashMap();
+                        map.put("title",categoryItemDetail.getCategoryName());
+                        map.put("sonNum",categoryItemDetail.getSonItem());
+                        map.put("totalItem",categoryItemDetail.getSonTotality());
+                        CateItem.add(map);
+                    }
+                }
+            }
+
+            @Override
+            public void onFailure(Exception e) {
+
+            }
+        });
+        return CateItem;
     }
 
     // 加载数据以 List 形式向 Vertical ListView 提供数据
     private List<Map<String,Object>> VLVgetData() {
+
+        // 获取 网站地址
+        String BaseURL = GetStringSharedPreferencesContains(
+                SharedPreferenceDefault.SharedPreferenceSysConfName,
+                SharedPreferenceDefault.SharedPreferenceSysConfServerAdd
+        );
+
+        // 获取 网站地址对应的 端口号
+        String ServerPort = GetStringSharedPreferencesContains(
+                SharedPreferenceDefault.SharedPreferenceSysConfName,
+                SharedPreferenceDefault.SharedPreferenceSysConfServerPort
+        );
+
+
         String[] CrewName = {"张三","李四","李斯特"};
         String[] CrewEmail = {"ThisIsATestEmail@xxx.com1","ThisIsATestEmail@xxx.com2","ThisIsATestEmail@xxx.com3"};
         List<Map<String,Object>> list = new ArrayList<>();

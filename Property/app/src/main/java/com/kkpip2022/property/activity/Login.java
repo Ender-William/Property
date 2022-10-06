@@ -145,6 +145,7 @@ public class Login extends BaseActivity {
                                 SharedPreferenceDefault.SharedPreferenceSysConfLoginState,
                                 LoginResponse_state
                         );
+
                         // showToastSync(getString(R.string.Warning_loginSuccess));
                         // 跳转到主页面
                         navigateTo(Home.class,true);
