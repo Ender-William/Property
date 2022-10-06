@@ -22,6 +22,8 @@ import com.kkpip2022.property.api.SharedPreferenceDefault;
 import com.kkpip2022.property.api.TtitCallback;
 import com.kkpip2022.property.entity.CategoryItemDetail;
 import com.kkpip2022.property.entity.CategoryResponse;
+import com.kkpip2022.property.entity.UserEmail;
+import com.kkpip2022.property.entity.UserEmailItem;
 import com.kkpip2022.property.util.HorizontalListView;
 
 import java.util.ArrayList;
@@ -43,7 +45,11 @@ public class HomeFragment extends BaseFragment {
 
     ListView VerticalListView_lv;
 
+    // 创建作用域在 HomeFragment 中的用于向 Horizon ListView 加载 List 数据的变量
     private List<Map<String,Object>> CateItem = new ArrayList<>();
+
+    // 创建作用域在 HomeFragment 中用于向 Vertical ListView 中用户及电子邮箱 List 数据的变量
+    private List<Map<String,Object>> UserItem = new ArrayList<>();
 
     // TODO: Rename and change types and number of parameters
     public static HomeFragment newInstance() {
@@ -105,6 +111,7 @@ public class HomeFragment extends BaseFragment {
     // 加载数据并以 List 形式向 Horizontal ListView 提供数据
     private List<Map<String, Object>> HLVgetData() {
 
+        // 首先需要传参，这里传递用户账号的权限说明，注：在Version 1 版本中无实质意义
         HashMap<String, Object> params = new HashMap<String, Object>();
         params.put("authority","admin");
 
@@ -123,17 +130,23 @@ public class HomeFragment extends BaseFragment {
         // 传参部分代码
         String ExtURL = "authority=" + "admin";
 
+        // 调用 API 访问后端接口 HOME_CATEDETAIL
         Api.config(BaseURL, ServerPort, ApiConfig.HOME_CATEDETAIL, ExtURL, params).postRequest(new TtitCallback() {
             @Override
             public void onSuccess(String res) {
-
+                // 如果网络没有错误
                 Log.e("connection success:", res);
-
+                // 创建 Gson 方法
                 Gson gson = new Gson();
+                // 获取返回值中 data 数据，data 数据格式为一个 List，List 中每一项为一个简单的 Json 数据
                 CategoryResponse categoryResponse = gson.fromJson(res, CategoryResponse.class);
                 if (categoryResponse.getData() != null) {
                     // 如果 data 项有数据
+                    // 将 data 数据赋值给 CategoryResponse
                     List<String> CategoryResponse = categoryResponse.getData();
+                    // 通过遍历的方法逐一读取 List 中每一项，将每一项 Json 格式数据通过实体类中 setter 与 getter
+                    // 方法，读取出目标数据，并将目标数据添加到一个空的 Map 中
+                    // 每一次添加完成都将 Map 添加到 CateItem 变量中
                     for (int i = 0; i < CategoryResponse.size(); i++) {
                         String TempData = (String) String.valueOf(CategoryResponse.get(i));
                         CategoryItemDetail categoryItemDetail = gson.fromJson(TempData,CategoryItemDetail.class);
@@ -157,6 +170,10 @@ public class HomeFragment extends BaseFragment {
     // 加载数据以 List 形式向 Vertical ListView 提供数据
     private List<Map<String,Object>> VLVgetData() {
 
+        // 首先需要传参，这里传递用户账号的权限说明，注：在Version 1 版本中无实质意义
+        HashMap<String, Object> params = new HashMap<String, Object>();
+        params.put("authority","admin");
+
         // 获取 网站地址
         String BaseURL = GetStringSharedPreferencesContains(
                 SharedPreferenceDefault.SharedPreferenceSysConfName,
@@ -169,17 +186,42 @@ public class HomeFragment extends BaseFragment {
                 SharedPreferenceDefault.SharedPreferenceSysConfServerPort
         );
 
+        // 传参部分代码
+        String ExtURL = "authority=" + "admin";
 
-        String[] CrewName = {"张三","李四","李斯特"};
-        String[] CrewEmail = {"ThisIsATestEmail@xxx.com1","ThisIsATestEmail@xxx.com2","ThisIsATestEmail@xxx.com3"};
-        List<Map<String,Object>> list = new ArrayList<>();
-        for (int i=0;i < CrewName.length;i++) {
-            Map map = new HashMap();
-            map.put("crewName",CrewName[i]);
-            map.put("crewEmail",CrewEmail[i]);
-            list.add(map);
-        }
-        return list;
+        Api.config(BaseURL,ServerPort,ApiConfig.GET_USER_EMAIL,ExtURL,params).postRequest(new TtitCallback() {
+            @Override
+            public void onSuccess(String res) {
+                // 如果网络没有错误
+                Log.e("connection success:", res);
+                // 创建 Gson 方法
+                Gson gson = new Gson();
+                // 获取返回值中 data 数据，data 数据格式为一个 List，List 中每一项为一个简单的 Json 数据
+                UserEmail userEmail = gson.fromJson(res, UserEmail.class);
+                if (userEmail.getData() != null) {
+                    // 如果 data 项有数据
+                    // 将 data 数据赋值给 CategoryResponse
+                    List<String> CategoryResponse = userEmail.getData();
+                    // 通过遍历的方法逐一读取 List 中每一项，将每一项 Json 格式数据通过实体类中 setter 与 getter
+                    // 方法，读取出目标数据，并将目标数据添加到一个空的 Map 中
+                    // 每一次添加完成都将 Map 添加到 CateItem 变量中
+                    for (int i = 0; i < CategoryResponse.size(); i++) {
+                        String TempData = (String) String.valueOf(CategoryResponse.get(i));
+                        UserEmailItem userEmailItem = gson.fromJson(TempData,UserEmailItem.class);
+                        Map map = new HashMap();
+                        map.put("crewName",userEmailItem.getStuname());
+                        map.put("crewEmail",userEmailItem.getEmail());
+                        UserItem.add(map);
+                    }
+                }
+            }
+
+            @Override
+            public void onFailure(Exception e) {
+
+            }
+        });
+        return UserItem;
     }
 
     @Override

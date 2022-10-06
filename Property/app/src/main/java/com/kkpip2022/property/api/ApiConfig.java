@@ -6,5 +6,6 @@ public class ApiConfig {
     public static final String FIND_USR = "/api/finduser?"; // stuID={$value}
     public static final String REGISTER = "/api/register?"; //
     public static final String GET_DETAIL_USERINFO = "/api/userinfo?";
+    public static final String GET_USER_EMAIL = "/api/getalluseremail?";
     public static final String HOME_CATEDETAIL = "/api/getcargoinfo?";
 }
