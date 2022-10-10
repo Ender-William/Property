@@ -1,6 +1,11 @@
 // 处理用户相关的数据
 const { SuccessModel } = require("../model/responseModel");
-const { getList, login, finduser, register, getUserInfoDetail, getCateInfo} = require('../controllers/process')
+const { login } = require('../controllers/LoginController');
+const { register} = require('../controllers/RegisterController');
+const { finduser } = require('../controllers/FinduserController');
+const { getCateSon } = require('../controllers/GetSonCateItemController');
+const { getUserInfoDetail,
+    getAllUserEmail, getCateInfo} = require('../controllers/process');
 const handleProcessRoute = (req, res) => {
     // 定义处理路由的逻辑
 
@@ -66,6 +71,23 @@ const handleProcessRoute = (req, res) => {
         });
     }
 
+    if (method === 'POST' && req.path === '/api/getalluseremail') {
+        // /api/getalluseremail?authority={$authority}
+        const listDataPromise = getAllUserEmail();
+        return listDataPromise.then((listData) => {
+            // console.log(listData);
+            return new SuccessModel(listData);
+        });
+    }
+
+    if (method === 'POST' && req.path === '/api/getsonitemlist') {
+        // /api/getsonitemlist?cateid={categoryId}
+        const cateID = req.query.cateid || '';
+        const listDataPromise = getCateSon(cateID);
+        return listDataPromise.then((listData) => {
+            return new SuccessModel(listData);
+        })
+    }
 }
 
 module.exports = handleProcessRoute;

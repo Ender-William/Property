@@ -1,24 +1,5 @@
 const {execSQL,execMultiSQL} = require('../db_services/mysqlService')
 
-const login = (stuID, passwd) => {
-    // 登录时的业务逻辑
-    let sql = `select * from userinfoTB where`;
-
-    if (stuID) {
-        sql += ` stuID='${stuID}' `;
-    }
-    if (passwd) {
-        sql += `and passwd='${passwd}' `;
-    }
-    sqlresult = execSQL(sql);
-    if (sqlresult) {
-        sqlresult.then((data) => {
-            console.log(data);
-        })
-    }
-    return execSQL(sql);
-}
-
 const finduser = (stuID) => {
     // 查询用户是否存在
     let sql = `select stuID from userinfoTB where`;
@@ -75,6 +56,18 @@ const getCateInfo = () => {
     return sqlresult;
 }
 
+const getAllUserEmail = () => {
+    // 获取全部用户的用户名及电子邮箱地址
+    let sql = `SELECT stuID,stuname,email FROM userinfoTB`;
+    sqlresult = execMultiSQL(sql);
+    if (sqlresult) {
+        sqlresult.then((date) => {
+            console.log(date);
+        })
+    }
+    return sqlresult;
+}
+
 const getList = (stuID, passwd, token) => {
     // 从数据库获得数据
     return [
@@ -93,9 +86,9 @@ const getList = (stuID, passwd, token) => {
 
 module.exports = {
     getList,
-    login,
     finduser,
     register,
     getUserInfoDetail,
+    getAllUserEmail,
     getCateInfo,
 }

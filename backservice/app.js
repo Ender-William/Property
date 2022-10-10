@@ -1,22 +1,29 @@
 const querystring = require('querystring');
 
+// 设置 Handler 数据处理路由
 const handleProcessRoute = require('./src/routes/userinfo');
 
-// 处理POST数据
+// POST 数据的处理部分
 const getPostDate = (req) => {
+    // 开启 Promise
     const promise =  new Promise((resolve, reject) => {
+
+        // 处理 method 为 POST 的数据
         if (req.method !== 'POST') {
          resolve({});
          return;
         }
 
+        // 设置返回的数据格式，格式为 application/json
         if (req.headers['context-type'] !== 'appilication/json') {
             resolve({});
             return;
         }
 
+        // 设置空的 postData
         let postData = '';
 
+        //
         req.on('data', (chunk) => {
             postData += chunk.toString();
         });
@@ -52,9 +59,10 @@ const serverHandler = (req, res) => {
         // console.log(postData);
         req.body = postData;
         //console.log(postData);
-        // 处理程序相关的业务
+        // 将 req res 数据交由路由进行处理，并获得 Promise 数据
         const processDataPromise = handleProcessRoute(req, res);
 
+        // 如果匹配到了路由
         if (processDataPromise) {
             processDataPromise.then((processData) => {
                 res.end(
@@ -70,7 +78,6 @@ const serverHandler = (req, res) => {
         res.end();
 
     });
-
 }
 
 module.exports = serverHandler;
