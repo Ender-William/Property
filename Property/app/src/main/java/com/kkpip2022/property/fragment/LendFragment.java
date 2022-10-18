@@ -271,10 +271,8 @@ public class LendFragment extends BaseFragment {
 
                                 @Override
                                 public void onFailure(Exception e) {
-
                                 }
                             });
-
                         }
                         // data 数据返回为空
                         // 说明数据库没有这个物品
