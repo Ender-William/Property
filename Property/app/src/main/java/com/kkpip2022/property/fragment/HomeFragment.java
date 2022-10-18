@@ -16,6 +16,7 @@ import android.widget.SimpleAdapter;
 
 import com.google.gson.Gson;
 import com.kkpip2022.property.R;
+import com.kkpip2022.property.activity.CategoryDetail;
 import com.kkpip2022.property.api.Api;
 import com.kkpip2022.property.api.ApiConfig;
 import com.kkpip2022.property.api.SharedPreferenceDefault;
@@ -233,6 +234,7 @@ public class HomeFragment extends BaseFragment {
     public void HLVonItemClick(AdapterView<?> parent, View view, int position, long id) {
         Log.i("position:",String.valueOf(position));
         String text = HorizonListView_lv.getAdapter().getItem(position).toString();
+        navigateToWithIntVal(CategoryDetail.class,true,position);
     }
 
     // 用来处理 Vertical ListView 中 Item 的点击事件

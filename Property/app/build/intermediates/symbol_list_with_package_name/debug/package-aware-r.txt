@@ -2003,6 +2003,7 @@ dimen dimen_150dp
 dimen dimen_15dp
 dimen dimen_160dp
 dimen dimen_180dp
+dimen dimen_2_5dp
 dimen dimen_200dp
 dimen dimen_20dp
 dimen dimen_20sp
@@ -2015,6 +2016,7 @@ dimen dimen_270dp
 dimen dimen_300dp
 dimen dimen_30dp
 dimen dimen_30sp
+dimen dimen_35dp
 dimen dimen_3px
 dimen dimen_400dp
 dimen dimen_40dp
@@ -2027,6 +2029,7 @@ dimen dimen_60dp
 dimen dimen_60sp
 dimen dimen_66dp
 dimen dimen_70dp
+dimen dimen_75dp
 dimen dimen_80dp
 dimen dimen_90dp
 dimen disabled_alpha_material_dark
@@ -2569,6 +2572,7 @@ drawable btn_radio_off_mtrl
 drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
+drawable del_blue
 drawable design_fab_background
 drawable design_ic_visibility
 drawable design_ic_visibility_off
@@ -2628,6 +2632,7 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable plus_blue
 drawable save_fill
 drawable server_emp
 drawable server_fill
@@ -2769,6 +2774,10 @@ id callMeasure
 id cancel_action
 id cancel_button
 id carryVelocity
+id cateItemDetail_add_btn
+id cateItemDetail_back_btn
+id cateItemDetail_delete_btn
+id cateItemDetail_listview
 id category_layout
 id center
 id centerCrop
@@ -2913,7 +2922,12 @@ id layout
 id left
 id leftToRight
 id legacy
+id lend_confirm_btn
+id lend_fatherCate_tv
+id lend_have_tv
+id lend_item_title_tv
 id lend_qrScan_btn
+id lend_want_et
 id line1
 id line3
 id linear
@@ -3028,6 +3042,7 @@ id progress_horizontal
 id radio
 id ratio
 id rectangles
+id return_itemName_et
 id return_qrScan_btn
 id reverseSawtooth
 id right
@@ -3090,6 +3105,9 @@ id snackbar_action
 id snackbar_text
 id snap
 id snapMargins
+id son_cate_image_iv
+id son_cate_title_tv
+id son_cate_total_tv
 id south
 id spacer
 id special_effects_controller_view_tag
@@ -3301,6 +3319,7 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_category_detail
 layout activity_home
 layout activity_login
 layout activity_main
@@ -3401,6 +3420,7 @@ layout other_userinfo
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
+layout son_cate_detail
 layout support_simple_spinner_dropdown_item
 layout test_action_chip
 layout test_chip_zero_corner_radius
@@ -3443,6 +3463,8 @@ mipmap user_deep
 mipmap user_fire
 plurals mtrl_badge_content_description
 raw zxing_beep
+string Category_Item_Item
+string Category_Item_Total_Til
 string Category_TotalCate
 string Category_TotalSonItem
 string HomePage_Title

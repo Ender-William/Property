@@ -115,6 +115,17 @@ public abstract class BaseActivity extends AppCompatActivity {
         }
     }
 
+    public void navigateToWithIntVal(Class cls,boolean bool, int str) {
+        Intent intent = new Intent(mContext,cls);
+        intent.putExtra("intKEY",str);
+        if(bool){
+            Log.e("Activity:","StartActivity");
+            startActivity(intent, ActivityOptions.makeSceneTransitionAnimation((Activity) mContext).toBundle());
+        }else{
+            startActivity(intent);
+        }
+    }
+
     /**
      * 接收 Intent 的传参;
      * @return : String Intent 接收到的字符串;
@@ -123,6 +134,33 @@ public abstract class BaseActivity extends AppCompatActivity {
         Intent intent = getIntent();
         String val_str = intent.getStringExtra("KEY");
         return val_str;
+    }
+
+    public int navigateGetIntVal() {
+        Intent intent = getIntent();
+        int val_str = intent.getIntExtra("intKEY",0);
+        return val_str;
+    }
+
+    /**
+     * 用于传递跳转到的 Fragment 位置
+     * @param cls: Class 目标 Activity 的 Class;
+     * @param position: int 目标 Fragment 的位置;
+     */
+    public void navigateToFragment(Class cls,int position) {
+        Intent intent = new Intent(mContext,cls);
+        intent.putExtra("Frag",position);
+        startActivity(intent, ActivityOptions.makeSceneTransitionAnimation((Activity) mContext).toBundle());
+    }
+
+    /**
+     * 用于接收需要跳转的 Fragment Position 地址
+     * @return int
+     */
+    public int getFragmentPosition() {
+        Intent intent = getIntent();
+        int val_int = intent.getIntExtra("Frag",1);
+        return val_int;
     }
 
     /**

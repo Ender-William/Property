@@ -5,12 +5,29 @@ import android.app.ActivityOptions;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.os.Looper;
 import android.util.Log;
+import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
 
 public class BaseFragment extends Fragment {
 
+    public void showToast(String str) {
+        Toast.makeText(getActivity(), str, Toast.LENGTH_LONG).show();
+    }
+
+    /**
+     * Toast 消息异步提示;
+     * @param msg: String 需要展示的字符串;
+     */
+    public void showToastSync(String msg){
+        // Toast 消息异步展示
+        // 注意，在没有异步进程的时候，不要使用 showToastSync ，否则会闪退
+        Looper.prepare();
+        Toast.makeText(getActivity(),msg,Toast.LENGTH_SHORT).show();
+        Looper.loop();
+    }
 
     /**
      * Intent 跳转方法，Bool 控制是否需要切换过度动画;
@@ -32,6 +49,17 @@ public class BaseFragment extends Fragment {
         Intent intent = new Intent(getActivity(),cls);
         intent.putExtra("KEY",str);
         startActivity(intent);
+    }
+
+    public void navigateToWithIntVal(Class cls,boolean bool, int str) {
+        Intent intent = new Intent(getActivity(),cls);
+        intent.putExtra("intKEY",str);
+        if(bool){
+            Log.e("Activity:","StartActivity");
+            startActivity(intent, ActivityOptions.makeSceneTransitionAnimation((Activity) getActivity()).toBundle());
+        }else{
+            startActivity(intent);
+        }
     }
 
     /**

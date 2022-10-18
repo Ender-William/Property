@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dimen_80dp"
+    android:layout_marginLeft="@dimen/dimen_10dp"
+    android:layout_marginRight="@dimen/dimen_10dp"
+    android:layout_marginTop="@dimen/dimen_5dp"
+    android:background="@color/middle_gray"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/son_cate_image_iv"
+        android:layout_width="@dimen/dimen_75dp"
+        android:layout_height="@dimen/dimen_75dp"
+        android:src="@drawable/welcome_banner"
+        android:layout_gravity="center_vertical"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="@dimen/dimen_75dp"
+        android:layout_marginLeft="@dimen/dimen_25dp"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/son_cate_title_tv"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_35dp"
+            android:layout_marginRight="@dimen/dimen_10dp"
+            android:maxLines="1"
+            android:textColor="@color/ice_deep"
+            android:fontFamily="@font/zh_blod"
+            android:textSize="@dimen/dimen_25sp"
+            android:gravity="center_vertical"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_35dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="@string/Category_Item_Total_Til"
+                android:fontFamily="@font/zh_blod"
+                android:textColor="@color/ice_deep"
+                android:textSize="@dimen/dimen_25sp"
+                android:gravity="center_vertical|left"/>
+            <TextView
+                android:id="@+id/son_cate_total_tv"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/en_blod"
+                android:textColor="@color/ice_deep"
+                android:textSize="@dimen/dimen_20sp"
+                android:gravity="center_vertical|right"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/dimen_10dp"
+                android:layout_marginRight="@dimen/dimen_10dp"
+                android:text="@string/Category_Item_Item"
+                android:textColor="@color/ice_deep"
+                android:fontFamily="@font/zh_blod"
+                android:textSize="@dimen/dimen_25sp"
+                android:gravity="center_vertical"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

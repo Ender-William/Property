@@ -8,4 +8,8 @@ public class ApiConfig {
     public static final String GET_DETAIL_USERINFO = "/api/userinfo?";
     public static final String GET_USER_EMAIL = "/api/getalluseremail?";
     public static final String HOME_CATEDETAIL = "/api/getcargoinfo?";
+    public static final String GET_CATE_SON_ITEM = "/api/getsonitemlist?";
+    public static final String SEARCH_SNCODE = "/api/searchsn?";
+    public static final String GET_FATHER_NAME = "/api/getcatename?";
+    public static final String TAKE_OUT = "/api/takeout?";
 }

@@ -66,6 +66,10 @@
     <string name="Category_TotalCate">子类总数：</string>
     <string name="Category_TotalSonItem">总库存数：</string>
 
+    <!--  Category Item List  -->
+    <string name="Category_Item_Total_Til">当前库存：</string>
+    <string name="Category_Item_Item">件</string>
+
     <!-- Operate( Lend/Return ) Page  -->
     <string name="Operate_FatherItemName">所属分类</string>
     <string name="Operate_Inventory">剩余</string>
@@ -84,5 +88,5 @@
     <string name="Me_NotReturn">尚未归还</string>
     <string name="Me_OperateRecode">历史记录</string>
     <string name="Me_Preference">更多设置</string>
-    
+
 </resources>

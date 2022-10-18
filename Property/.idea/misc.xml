@@ -4,20 +4,23 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="../../../../../../layout/custom_preview.xml" value="0.13958964009418096" />
+        <entry key="app/src/main/res/layout/activity_category_detai.xml" value="0.4166666666666667" />
+        <entry key="app/src/main/res/layout/activity_category_detail.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_home.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_server_conf.xml" value="0.3592592592592593" />
         <entry key="app/src/main/res/layout/activity_signup.xml" value="0.22" />
         <entry key="app/src/main/res/layout/activity_welcome.xml" value="0.1514690982776089" />
-        <entry key="app/src/main/res/layout/category_name.xml" value="0.5" />
+        <entry key="app/src/main/res/layout/category_name.xml" value="0.35361216730038025" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_lend.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_lend_return.xml" value="0.17603850050658562" />
         <entry key="app/src/main/res/layout/fragment_me.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_operate.xml" value="0.1828774062816616" />
-        <entry key="app/src/main/res/layout/fragment_return.xml" value="0.18125" />
+        <entry key="app/src/main/res/layout/fragment_return.xml" value="0.33" />
         <entry key="app/src/main/res/layout/lend_return.xml" value="0.33" />
         <entry key="app/src/main/res/layout/other_userinfo.xml" value="0.2373353596757852" />
+        <entry key="app/src/main/res/layout/son_cate_detail.xml" value="0.331036376953125" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1" />
       </map>
     </option>

@@ -7,14 +7,9 @@
     <uses-sdk
         android:minSdkVersion="29"
         android:targetSdkVersion="30" />
-
     <!-- 网络权限 -->
-    <uses-permission android:name="android.permission.INTERNET" />
-
-    <!-- 使用手机震动权限 -->
-    <uses-permission android:name="android.permission.VIBRATE" />
-
-    <!-- 相机权限 ZXing 扫描条形码和二维码需要使用 -->
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- 使用手机震动权限 -->
+    <uses-permission android:name="android.permission.VIBRATE" /> <!-- 相机权限 ZXing 扫描条形码和二维码需要使用 -->
     <uses-permission android:name="android.permission.CAMERA" />
 
     <!-- Don't require camera, as this requires a rear camera. This allows it to work on the Nexus 7 -->
@@ -52,6 +47,9 @@
         android:testOnly="true"
         android:theme="@style/Theme.Property"
         android:usesCleartextTraffic="true" >
+        <activity
+            android:name="com.kkpip2022.property.activity.CategoryDetail"
+            android:exported="false" />
         <activity
             android:name="com.kkpip2022.property.activity.Home"
             android:exported="false" />

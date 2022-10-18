@@ -6,6 +6,9 @@ const { finduser } = require('../controllers/FinduserController');
 const { getCateSon } = require('../controllers/GetSonCateItemController');
 const { getUserInfoDetail,
     getAllUserEmail, getCateInfo} = require('../controllers/process');
+const {searchSN} = require("../controllers/SnSearchController");
+const {getCateName} = require("../controllers/GetCateNameController");
+const {takeout} = require("../controllers/TakeOutController");
 const handleProcessRoute = (req, res) => {
     // 定义处理路由的逻辑
 
@@ -83,7 +86,37 @@ const handleProcessRoute = (req, res) => {
     if (method === 'POST' && req.path === '/api/getsonitemlist') {
         // /api/getsonitemlist?cateid={categoryId}
         const cateID = req.query.cateid || '';
+        console.log(cateID);
         const listDataPromise = getCateSon(cateID);
+        return listDataPromise.then((listData) => {
+            return new SuccessModel(listData);
+        })
+    }
+
+    if (method === 'POST' && req.path === '/api/searchsn') {
+        // /api/searchsn?sn={sn}
+        const sn = req.query.sn || '';
+        const listDataPromise = searchSN(sn);
+        return listDataPromise.then((listData) => {
+            return new SuccessModel(listData);
+        })
+    }
+
+    if (method === 'POST' && req.path === '/api/getcatename') {
+        // /api/getcatename?id={id}
+        const id = req.query.id || '';
+        const listDataPromise = getCateName(id);
+        return listDataPromise.then((listData) => {
+            return new SuccessModel(listData);
+        })
+    }
+
+    if (method === 'POST' && req.path === '/api/takeout') {
+        // /api/getcatename?num={num}&sn={sn}&stuID={stuID}
+        const sn = req.query.sn || '';
+        const num = req.query.num || '';
+        const stuID = req.query.stuID || '';
+        const listDataPromise = takeout(sn,num,stuID);
         return listDataPromise.then((listData) => {
             return new SuccessModel(listData);
         })

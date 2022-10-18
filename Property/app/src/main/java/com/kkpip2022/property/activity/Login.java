@@ -72,6 +72,7 @@ public class Login extends BaseActivity {
             public void onClick(View view) {
                 stuID = username_et.getText().toString().trim();
                 passwd = password_et.getText().toString().trim();
+
                 login(stuID,passwd);
             }
         });

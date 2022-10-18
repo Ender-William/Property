@@ -9,179 +9,180 @@
 8-->/Users/william/Documents/Project/14_Android/Property/app/src/main/AndroidManifest.xml
 9        android:targetSdkVersion="30" />
 9-->/Users/william/Documents/Project/14_Android/Property/app/src/main/AndroidManifest.xml
-10
-11    <!-- 网络权限 -->
-12    <uses-permission android:name="android.permission.INTERNET" />
+10    <!-- 网络权限 -->
+11    <uses-permission android:name="android.permission.INTERNET" /> <!-- 使用手机震动权限 -->
+11-->/Users/william/Documents/Project/14_Android/Property/app/src/main/AndroidManifest.xml:6:5-67
+11-->/Users/william/Documents/Project/14_Android/Property/app/src/main/AndroidManifest.xml:6:22-64
+12    <uses-permission android:name="android.permission.VIBRATE" /> <!-- 相机权限 ZXing 扫描条形码和二维码需要使用 -->
 12-->/Users/william/Documents/Project/14_Android/Property/app/src/main/AndroidManifest.xml:7:5-66
-12-->/Users/william/Documents/Project/14_Android/Property/app/src/main/AndroidManifest.xml:7:22-64
-13
-14    <!-- 使用手机震动权限 -->
-15    <uses-permission android:name="android.permission.VIBRATE" />
-15-->/Users/william/Documents/Project/14_Android/Property/app/src/main/AndroidManifest.xml:10:5-65
-15-->/Users/william/Documents/Project/14_Android/Property/app/src/main/AndroidManifest.xml:10:22-63
-16
-17    <!-- 相机权限 ZXing 扫描条形码和二维码需要使用 -->
-18    <uses-permission android:name="android.permission.CAMERA" />
-18-->/Users/william/Documents/Project/14_Android/Property/app/src/main/AndroidManifest.xml:13:5-64
-18-->/Users/william/Documents/Project/14_Android/Property/app/src/main/AndroidManifest.xml:13:22-62
-19
-20    <!-- Don't require camera, as this requires a rear camera. This allows it to work on the Nexus 7 -->
-21    <uses-feature
-21-->[com.journeyapps:zxing-android-embedded:3.5.0] /Users/william/.gradle/caches/transforms-3/8bc7a597eda30428e1f1648602e201b3/transformed/jetified-zxing-android-embedded-3.5.0/AndroidManifest.xml:24:5-26:36
-22        android:name="android.hardware.camera"
-22-->[com.journeyapps:zxing-android-embedded:3.5.0] /Users/william/.gradle/caches/transforms-3/8bc7a597eda30428e1f1648602e201b3/transformed/jetified-zxing-android-embedded-3.5.0/AndroidManifest.xml:25:9-47
-23        android:required="false" />
-23-->[com.journeyapps:zxing-android-embedded:3.5.0] /Users/william/.gradle/caches/transforms-3/8bc7a597eda30428e1f1648602e201b3/transformed/jetified-zxing-android-embedded-3.5.0/AndroidManifest.xml:26:9-33
-24    <uses-feature
-24-->[com.journeyapps:zxing-android-embedded:3.5.0] /Users/william/.gradle/caches/transforms-3/8bc7a597eda30428e1f1648602e201b3/transformed/jetified-zxing-android-embedded-3.5.0/AndroidManifest.xml:27:5-29:36
-25        android:name="android.hardware.camera.front"
-25-->[com.journeyapps:zxing-android-embedded:3.5.0] /Users/william/.gradle/caches/transforms-3/8bc7a597eda30428e1f1648602e201b3/transformed/jetified-zxing-android-embedded-3.5.0/AndroidManifest.xml:28:9-53
-26        android:required="false" /> <!-- TODO replace above two with next line after Android 4.2 -->
-26-->[com.journeyapps:zxing-android-embedded:3.5.0] /Users/william/.gradle/caches/transforms-3/8bc7a597eda30428e1f1648602e201b3/transformed/jetified-zxing-android-embedded-3.5.0/AndroidManifest.xml:29:9-33
-27    <!-- <uses-feature android:name="android.hardware.camera.any"/> -->
-28    <uses-feature
-28-->[com.journeyapps:zxing-android-embedded:3.5.0] /Users/william/.gradle/caches/transforms-3/8bc7a597eda30428e1f1648602e201b3/transformed/jetified-zxing-android-embedded-3.5.0/AndroidManifest.xml:32:5-34:36
-29        android:name="android.hardware.camera.autofocus"
-29-->[com.journeyapps:zxing-android-embedded:3.5.0] /Users/william/.gradle/caches/transforms-3/8bc7a597eda30428e1f1648602e201b3/transformed/jetified-zxing-android-embedded-3.5.0/AndroidManifest.xml:33:9-57
-30        android:required="false" />
-30-->[com.journeyapps:zxing-android-embedded:3.5.0] /Users/william/.gradle/caches/transforms-3/8bc7a597eda30428e1f1648602e201b3/transformed/jetified-zxing-android-embedded-3.5.0/AndroidManifest.xml:34:9-33
-31    <uses-feature
-31-->[com.journeyapps:zxing-android-embedded:3.5.0] /Users/william/.gradle/caches/transforms-3/8bc7a597eda30428e1f1648602e201b3/transformed/jetified-zxing-android-embedded-3.5.0/AndroidManifest.xml:35:5-37:36
-32        android:name="android.hardware.camera.flash"
-32-->[com.journeyapps:zxing-android-embedded:3.5.0] /Users/william/.gradle/caches/transforms-3/8bc7a597eda30428e1f1648602e201b3/transformed/jetified-zxing-android-embedded-3.5.0/AndroidManifest.xml:36:9-53
-33        android:required="false" />
-33-->[com.journeyapps:zxing-android-embedded:3.5.0] /Users/william/.gradle/caches/transforms-3/8bc7a597eda30428e1f1648602e201b3/transformed/jetified-zxing-android-embedded-3.5.0/AndroidManifest.xml:37:9-33
-34    <uses-feature
-34-->[com.journeyapps:zxing-android-embedded:3.5.0] /Users/william/.gradle/caches/transforms-3/8bc7a597eda30428e1f1648602e201b3/transformed/jetified-zxing-android-embedded-3.5.0/AndroidManifest.xml:38:5-40:36
-35        android:name="android.hardware.screen.landscape"
-35-->[com.journeyapps:zxing-android-embedded:3.5.0] /Users/william/.gradle/caches/transforms-3/8bc7a597eda30428e1f1648602e201b3/transformed/jetified-zxing-android-embedded-3.5.0/AndroidManifest.xml:39:9-57
-36        android:required="false" />
-36-->[com.journeyapps:zxing-android-embedded:3.5.0] /Users/william/.gradle/caches/transforms-3/8bc7a597eda30428e1f1648602e201b3/transformed/jetified-zxing-android-embedded-3.5.0/AndroidManifest.xml:40:9-33
-37    <uses-feature
-37-->[com.journeyapps:zxing-android-embedded:3.5.0] /Users/william/.gradle/caches/transforms-3/8bc7a597eda30428e1f1648602e201b3/transformed/jetified-zxing-android-embedded-3.5.0/AndroidManifest.xml:41:5-43:36
-38        android:name="android.hardware.wifi"
-38-->[com.journeyapps:zxing-android-embedded:3.5.0] /Users/william/.gradle/caches/transforms-3/8bc7a597eda30428e1f1648602e201b3/transformed/jetified-zxing-android-embedded-3.5.0/AndroidManifest.xml:42:9-45
-39        android:required="false" />
-39-->[com.journeyapps:zxing-android-embedded:3.5.0] /Users/william/.gradle/caches/transforms-3/8bc7a597eda30428e1f1648602e201b3/transformed/jetified-zxing-android-embedded-3.5.0/AndroidManifest.xml:43:9-33
-40
-41    <application
-41-->/Users/william/Documents/Project/14_Android/Property/app/src/main/AndroidManifest.xml:15:5-55:19
-42        android:allowBackup="true"
-42-->/Users/william/Documents/Project/14_Android/Property/app/src/main/AndroidManifest.xml:16:9-35
-43        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-43-->[androidx.core:core:1.8.0] /Users/william/.gradle/caches/transforms-3/0638d9dacb5fd10604e28ec2b4d3c80b/transformed/core-1.8.0/AndroidManifest.xml:24:18-86
-44        android:dataExtractionRules="@xml/data_extraction_rules"
-44-->/Users/william/Documents/Project/14_Android/Property/app/src/main/AndroidManifest.xml:17:9-65
-45        android:debuggable="true"
-46        android:extractNativeLibs="false"
-47        android:fullBackupContent="@xml/backup_rules"
-47-->/Users/william/Documents/Project/14_Android/Property/app/src/main/AndroidManifest.xml:18:9-54
-48        android:icon="@mipmap/ic_launcher"
-48-->/Users/william/Documents/Project/14_Android/Property/app/src/main/AndroidManifest.xml:19:9-43
-49        android:label="@string/app_name"
-49-->/Users/william/Documents/Project/14_Android/Property/app/src/main/AndroidManifest.xml:20:9-41
-50        android:roundIcon="@mipmap/ic_launcher_round"
-50-->/Users/william/Documents/Project/14_Android/Property/app/src/main/AndroidManifest.xml:21:9-54
-51        android:supportsRtl="true"
-51-->/Users/william/Documents/Project/14_Android/Property/app/src/main/AndroidManifest.xml:22:9-35
-52        android:testOnly="true"
-53        android:theme="@style/Theme.Property"
-53-->/Users/william/Documents/Project/14_Android/Property/app/src/main/AndroidManifest.xml:23:9-46
-54        android:usesCleartextTraffic="true" >
-54-->/Users/william/Documents/Project/14_Android/Property/app/src/main/AndroidManifest.xml:24:9-44
-55        <activity
-55-->/Users/william/Documents/Project/14_Android/Property/app/src/main/AndroidManifest.xml:26:9-28:40
-56            android:name="com.kkpip2022.property.activity.Home"
-56-->/Users/william/Documents/Project/14_Android/Property/app/src/main/AndroidManifest.xml:27:13-42
-57            android:exported="false" />
-57-->/Users/william/Documents/Project/14_Android/Property/app/src/main/AndroidManifest.xml:28:13-37
-58        <activity
-58-->/Users/william/Documents/Project/14_Android/Property/app/src/main/AndroidManifest.xml:29:9-31:40
-59            android:name="com.kkpip2022.property.activity.ServerConf"
-59-->/Users/william/Documents/Project/14_Android/Property/app/src/main/AndroidManifest.xml:30:13-48
-60            android:exported="false" />
-60-->/Users/william/Documents/Project/14_Android/Property/app/src/main/AndroidManifest.xml:31:13-37
-61        <activity
-61-->/Users/william/Documents/Project/14_Android/Property/app/src/main/AndroidManifest.xml:32:9-34:40
-62            android:name="com.kkpip2022.property.activity.Signup"
-62-->/Users/william/Documents/Project/14_Android/Property/app/src/main/AndroidManifest.xml:33:13-44
-63            android:exported="false" />
-63-->/Users/william/Documents/Project/14_Android/Property/app/src/main/AndroidManifest.xml:34:13-37
-64        <activity
-64-->/Users/william/Documents/Project/14_Android/Property/app/src/main/AndroidManifest.xml:35:9-37:40
-65            android:name="com.kkpip2022.property.activity.Login"
-65-->/Users/william/Documents/Project/14_Android/Property/app/src/main/AndroidManifest.xml:36:13-43
-66            android:exported="false" />
-66-->/Users/william/Documents/Project/14_Android/Property/app/src/main/AndroidManifest.xml:37:13-37
-67        <activity
-67-->/Users/william/Documents/Project/14_Android/Property/app/src/main/AndroidManifest.xml:38:9-46:20
-68            android:name="com.kkpip2022.property.activity.Welcome"
-68-->/Users/william/Documents/Project/14_Android/Property/app/src/main/AndroidManifest.xml:39:13-45
-69            android:exported="true" >
-69-->/Users/william/Documents/Project/14_Android/Property/app/src/main/AndroidManifest.xml:40:13-36
-70            <intent-filter>
-70-->/Users/william/Documents/Project/14_Android/Property/app/src/main/AndroidManifest.xml:41:13-45:29
-71                <action android:name="android.intent.action.MAIN" />
-71-->/Users/william/Documents/Project/14_Android/Property/app/src/main/AndroidManifest.xml:42:17-69
-71-->/Users/william/Documents/Project/14_Android/Property/app/src/main/AndroidManifest.xml:42:25-66
-72
-73                <category android:name="android.intent.category.LAUNCHER" />
-73-->/Users/william/Documents/Project/14_Android/Property/app/src/main/AndroidManifest.xml:44:17-77
-73-->/Users/william/Documents/Project/14_Android/Property/app/src/main/AndroidManifest.xml:44:27-74
-74            </intent-filter>
-75        </activity>
-76        <activity
-76-->/Users/william/Documents/Project/14_Android/Property/app/src/main/AndroidManifest.xml:47:9-49:40
-77            android:name="com.kkpip2022.property.activity.MainActivity"
-77-->/Users/william/Documents/Project/14_Android/Property/app/src/main/AndroidManifest.xml:48:13-50
-78            android:exported="false" />
-78-->/Users/william/Documents/Project/14_Android/Property/app/src/main/AndroidManifest.xml:49:13-37
-79        <activity
-79-->/Users/william/Documents/Project/14_Android/Property/app/src/main/AndroidManifest.xml:51:9-54:56
-80            android:name="com.kkpip2022.property.util.Capture"
-80-->/Users/william/Documents/Project/14_Android/Property/app/src/main/AndroidManifest.xml:51:19-47
-81            android:screenOrientation="portrait"
-81-->/Users/william/Documents/Project/14_Android/Property/app/src/main/AndroidManifest.xml:52:13-49
-82            android:stateNotNeeded="true"
-82-->/Users/william/Documents/Project/14_Android/Property/app/src/main/AndroidManifest.xml:53:13-42
-83            android:theme="@style/zxing_CaptureTheme" />
-83-->/Users/william/Documents/Project/14_Android/Property/app/src/main/AndroidManifest.xml:54:13-54
-84        <activity
-84-->[com.journeyapps:zxing-android-embedded:3.5.0] /Users/william/.gradle/caches/transforms-3/8bc7a597eda30428e1f1648602e201b3/transformed/jetified-zxing-android-embedded-3.5.0/AndroidManifest.xml:46:9-52:63
-85            android:name="com.journeyapps.barcodescanner.CaptureActivity"
-85-->[com.journeyapps:zxing-android-embedded:3.5.0] /Users/william/.gradle/caches/transforms-3/8bc7a597eda30428e1f1648602e201b3/transformed/jetified-zxing-android-embedded-3.5.0/AndroidManifest.xml:47:13-74
-86            android:clearTaskOnLaunch="true"
-86-->[com.journeyapps:zxing-android-embedded:3.5.0] /Users/william/.gradle/caches/transforms-3/8bc7a597eda30428e1f1648602e201b3/transformed/jetified-zxing-android-embedded-3.5.0/AndroidManifest.xml:48:13-45
-87            android:screenOrientation="sensorLandscape"
-87-->[com.journeyapps:zxing-android-embedded:3.5.0] /Users/william/.gradle/caches/transforms-3/8bc7a597eda30428e1f1648602e201b3/transformed/jetified-zxing-android-embedded-3.5.0/AndroidManifest.xml:49:13-56
-88            android:stateNotNeeded="true"
-88-->[com.journeyapps:zxing-android-embedded:3.5.0] /Users/william/.gradle/caches/transforms-3/8bc7a597eda30428e1f1648602e201b3/transformed/jetified-zxing-android-embedded-3.5.0/AndroidManifest.xml:50:13-42
-89            android:theme="@style/zxing_CaptureTheme"
-89-->[com.journeyapps:zxing-android-embedded:3.5.0] /Users/william/.gradle/caches/transforms-3/8bc7a597eda30428e1f1648602e201b3/transformed/jetified-zxing-android-embedded-3.5.0/AndroidManifest.xml:51:13-54
-90            android:windowSoftInputMode="stateAlwaysHidden" />
-90-->[com.journeyapps:zxing-android-embedded:3.5.0] /Users/william/.gradle/caches/transforms-3/8bc7a597eda30428e1f1648602e201b3/transformed/jetified-zxing-android-embedded-3.5.0/AndroidManifest.xml:52:13-60
-91
-92        <provider
-92-->[androidx.emoji2:emoji2:1.2.0] /Users/william/.gradle/caches/transforms-3/69e8195e0af1903606758bebf50c459d/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
-93            android:name="androidx.startup.InitializationProvider"
-93-->[androidx.emoji2:emoji2:1.2.0] /Users/william/.gradle/caches/transforms-3/69e8195e0af1903606758bebf50c459d/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:25:13-67
-94            android:authorities="com.kkpip2022.property.androidx-startup"
-94-->[androidx.emoji2:emoji2:1.2.0] /Users/william/.gradle/caches/transforms-3/69e8195e0af1903606758bebf50c459d/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:26:13-68
-95            android:exported="false" >
-95-->[androidx.emoji2:emoji2:1.2.0] /Users/william/.gradle/caches/transforms-3/69e8195e0af1903606758bebf50c459d/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:27:13-37
-96            <meta-data
-96-->[androidx.emoji2:emoji2:1.2.0] /Users/william/.gradle/caches/transforms-3/69e8195e0af1903606758bebf50c459d/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
-97                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-97-->[androidx.emoji2:emoji2:1.2.0] /Users/william/.gradle/caches/transforms-3/69e8195e0af1903606758bebf50c459d/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:30:17-75
-98                android:value="androidx.startup" />
-98-->[androidx.emoji2:emoji2:1.2.0] /Users/william/.gradle/caches/transforms-3/69e8195e0af1903606758bebf50c459d/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:31:17-49
-99            <meta-data
-99-->[androidx.lifecycle:lifecycle-process:2.4.1] /Users/william/.gradle/caches/transforms-3/a2a5ae00951a98f5c9bbf6406733a104/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:31:13-33:52
-100                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-100-->[androidx.lifecycle:lifecycle-process:2.4.1] /Users/william/.gradle/caches/transforms-3/a2a5ae00951a98f5c9bbf6406733a104/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:32:17-78
-101                android:value="androidx.startup" />
-101-->[androidx.lifecycle:lifecycle-process:2.4.1] /Users/william/.gradle/caches/transforms-3/a2a5ae00951a98f5c9bbf6406733a104/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:33:17-49
-102        </provider>
-103    </application>
-104
-105</manifest>
+12-->/Users/william/Documents/Project/14_Android/Property/app/src/main/AndroidManifest.xml:7:22-63
+13    <uses-permission android:name="android.permission.CAMERA" />
+13-->/Users/william/Documents/Project/14_Android/Property/app/src/main/AndroidManifest.xml:8:5-65
+13-->/Users/william/Documents/Project/14_Android/Property/app/src/main/AndroidManifest.xml:8:22-62
+14
+15    <!-- Don't require camera, as this requires a rear camera. This allows it to work on the Nexus 7 -->
+16    <uses-feature
+16-->[com.journeyapps:zxing-android-embedded:3.5.0] /Users/william/.gradle/caches/transforms-3/8bc7a597eda30428e1f1648602e201b3/transformed/jetified-zxing-android-embedded-3.5.0/AndroidManifest.xml:24:5-26:36
+17        android:name="android.hardware.camera"
+17-->[com.journeyapps:zxing-android-embedded:3.5.0] /Users/william/.gradle/caches/transforms-3/8bc7a597eda30428e1f1648602e201b3/transformed/jetified-zxing-android-embedded-3.5.0/AndroidManifest.xml:25:9-47
+18        android:required="false" />
+18-->[com.journeyapps:zxing-android-embedded:3.5.0] /Users/william/.gradle/caches/transforms-3/8bc7a597eda30428e1f1648602e201b3/transformed/jetified-zxing-android-embedded-3.5.0/AndroidManifest.xml:26:9-33
+19    <uses-feature
+19-->[com.journeyapps:zxing-android-embedded:3.5.0] /Users/william/.gradle/caches/transforms-3/8bc7a597eda30428e1f1648602e201b3/transformed/jetified-zxing-android-embedded-3.5.0/AndroidManifest.xml:27:5-29:36
+20        android:name="android.hardware.camera.front"
+20-->[com.journeyapps:zxing-android-embedded:3.5.0] /Users/william/.gradle/caches/transforms-3/8bc7a597eda30428e1f1648602e201b3/transformed/jetified-zxing-android-embedded-3.5.0/AndroidManifest.xml:28:9-53
+21        android:required="false" /> <!-- TODO replace above two with next line after Android 4.2 -->
+21-->[com.journeyapps:zxing-android-embedded:3.5.0] /Users/william/.gradle/caches/transforms-3/8bc7a597eda30428e1f1648602e201b3/transformed/jetified-zxing-android-embedded-3.5.0/AndroidManifest.xml:29:9-33
+22    <!-- <uses-feature android:name="android.hardware.camera.any"/> -->
+23    <uses-feature
+23-->[com.journeyapps:zxing-android-embedded:3.5.0] /Users/william/.gradle/caches/transforms-3/8bc7a597eda30428e1f1648602e201b3/transformed/jetified-zxing-android-embedded-3.5.0/AndroidManifest.xml:32:5-34:36
+24        android:name="android.hardware.camera.autofocus"
+24-->[com.journeyapps:zxing-android-embedded:3.5.0] /Users/william/.gradle/caches/transforms-3/8bc7a597eda30428e1f1648602e201b3/transformed/jetified-zxing-android-embedded-3.5.0/AndroidManifest.xml:33:9-57
+25        android:required="false" />
+25-->[com.journeyapps:zxing-android-embedded:3.5.0] /Users/william/.gradle/caches/transforms-3/8bc7a597eda30428e1f1648602e201b3/transformed/jetified-zxing-android-embedded-3.5.0/AndroidManifest.xml:34:9-33
+26    <uses-feature
+26-->[com.journeyapps:zxing-android-embedded:3.5.0] /Users/william/.gradle/caches/transforms-3/8bc7a597eda30428e1f1648602e201b3/transformed/jetified-zxing-android-embedded-3.5.0/AndroidManifest.xml:35:5-37:36
+27        android:name="android.hardware.camera.flash"
+27-->[com.journeyapps:zxing-android-embedded:3.5.0] /Users/william/.gradle/caches/transforms-3/8bc7a597eda30428e1f1648602e201b3/transformed/jetified-zxing-android-embedded-3.5.0/AndroidManifest.xml:36:9-53
+28        android:required="false" />
+28-->[com.journeyapps:zxing-android-embedded:3.5.0] /Users/william/.gradle/caches/transforms-3/8bc7a597eda30428e1f1648602e201b3/transformed/jetified-zxing-android-embedded-3.5.0/AndroidManifest.xml:37:9-33
+29    <uses-feature
+29-->[com.journeyapps:zxing-android-embedded:3.5.0] /Users/william/.gradle/caches/transforms-3/8bc7a597eda30428e1f1648602e201b3/transformed/jetified-zxing-android-embedded-3.5.0/AndroidManifest.xml:38:5-40:36
+30        android:name="android.hardware.screen.landscape"
+30-->[com.journeyapps:zxing-android-embedded:3.5.0] /Users/william/.gradle/caches/transforms-3/8bc7a597eda30428e1f1648602e201b3/transformed/jetified-zxing-android-embedded-3.5.0/AndroidManifest.xml:39:9-57
+31        android:required="false" />
+31-->[com.journeyapps:zxing-android-embedded:3.5.0] /Users/william/.gradle/caches/transforms-3/8bc7a597eda30428e1f1648602e201b3/transformed/jetified-zxing-android-embedded-3.5.0/AndroidManifest.xml:40:9-33
+32    <uses-feature
+32-->[com.journeyapps:zxing-android-embedded:3.5.0] /Users/william/.gradle/caches/transforms-3/8bc7a597eda30428e1f1648602e201b3/transformed/jetified-zxing-android-embedded-3.5.0/AndroidManifest.xml:41:5-43:36
+33        android:name="android.hardware.wifi"
+33-->[com.journeyapps:zxing-android-embedded:3.5.0] /Users/william/.gradle/caches/transforms-3/8bc7a597eda30428e1f1648602e201b3/transformed/jetified-zxing-android-embedded-3.5.0/AndroidManifest.xml:42:9-45
+34        android:required="false" />
+34-->[com.journeyapps:zxing-android-embedded:3.5.0] /Users/william/.gradle/caches/transforms-3/8bc7a597eda30428e1f1648602e201b3/transformed/jetified-zxing-android-embedded-3.5.0/AndroidManifest.xml:43:9-33
+35
+36    <application
+36-->/Users/william/Documents/Project/14_Android/Property/app/src/main/AndroidManifest.xml:10:5-53:19
+37        android:allowBackup="true"
+37-->/Users/william/Documents/Project/14_Android/Property/app/src/main/AndroidManifest.xml:11:9-35
+38        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+38-->[androidx.core:core:1.8.0] /Users/william/.gradle/caches/transforms-3/0638d9dacb5fd10604e28ec2b4d3c80b/transformed/core-1.8.0/AndroidManifest.xml:24:18-86
+39        android:dataExtractionRules="@xml/data_extraction_rules"
+39-->/Users/william/Documents/Project/14_Android/Property/app/src/main/AndroidManifest.xml:12:9-65
+40        android:debuggable="true"
+41        android:extractNativeLibs="false"
+42        android:fullBackupContent="@xml/backup_rules"
+42-->/Users/william/Documents/Project/14_Android/Property/app/src/main/AndroidManifest.xml:13:9-54
+43        android:icon="@mipmap/ic_launcher"
+43-->/Users/william/Documents/Project/14_Android/Property/app/src/main/AndroidManifest.xml:14:9-43
+44        android:label="@string/app_name"
+44-->/Users/william/Documents/Project/14_Android/Property/app/src/main/AndroidManifest.xml:15:9-41
+45        android:roundIcon="@mipmap/ic_launcher_round"
+45-->/Users/william/Documents/Project/14_Android/Property/app/src/main/AndroidManifest.xml:16:9-54
+46        android:supportsRtl="true"
+46-->/Users/william/Documents/Project/14_Android/Property/app/src/main/AndroidManifest.xml:17:9-35
+47        android:testOnly="true"
+48        android:theme="@style/Theme.Property"
+48-->/Users/william/Documents/Project/14_Android/Property/app/src/main/AndroidManifest.xml:18:9-46
+49        android:usesCleartextTraffic="true" >
+49-->/Users/william/Documents/Project/14_Android/Property/app/src/main/AndroidManifest.xml:19:9-44
+50        <activity
+50-->/Users/william/Documents/Project/14_Android/Property/app/src/main/AndroidManifest.xml:21:9-23:40
+51            android:name="com.kkpip2022.property.activity.CategoryDetail"
+51-->/Users/william/Documents/Project/14_Android/Property/app/src/main/AndroidManifest.xml:22:13-52
+52            android:exported="false" />
+52-->/Users/william/Documents/Project/14_Android/Property/app/src/main/AndroidManifest.xml:23:13-37
+53        <activity
+53-->/Users/william/Documents/Project/14_Android/Property/app/src/main/AndroidManifest.xml:24:9-26:40
+54            android:name="com.kkpip2022.property.activity.Home"
+54-->/Users/william/Documents/Project/14_Android/Property/app/src/main/AndroidManifest.xml:25:13-42
+55            android:exported="false" />
+55-->/Users/william/Documents/Project/14_Android/Property/app/src/main/AndroidManifest.xml:26:13-37
+56        <activity
+56-->/Users/william/Documents/Project/14_Android/Property/app/src/main/AndroidManifest.xml:27:9-29:40
+57            android:name="com.kkpip2022.property.activity.ServerConf"
+57-->/Users/william/Documents/Project/14_Android/Property/app/src/main/AndroidManifest.xml:28:13-48
+58            android:exported="false" />
+58-->/Users/william/Documents/Project/14_Android/Property/app/src/main/AndroidManifest.xml:29:13-37
+59        <activity
+59-->/Users/william/Documents/Project/14_Android/Property/app/src/main/AndroidManifest.xml:30:9-32:40
+60            android:name="com.kkpip2022.property.activity.Signup"
+60-->/Users/william/Documents/Project/14_Android/Property/app/src/main/AndroidManifest.xml:31:13-44
+61            android:exported="false" />
+61-->/Users/william/Documents/Project/14_Android/Property/app/src/main/AndroidManifest.xml:32:13-37
+62        <activity
+62-->/Users/william/Documents/Project/14_Android/Property/app/src/main/AndroidManifest.xml:33:9-35:40
+63            android:name="com.kkpip2022.property.activity.Login"
+63-->/Users/william/Documents/Project/14_Android/Property/app/src/main/AndroidManifest.xml:34:13-43
+64            android:exported="false" />
+64-->/Users/william/Documents/Project/14_Android/Property/app/src/main/AndroidManifest.xml:35:13-37
+65        <activity
+65-->/Users/william/Documents/Project/14_Android/Property/app/src/main/AndroidManifest.xml:36:9-44:20
+66            android:name="com.kkpip2022.property.activity.Welcome"
+66-->/Users/william/Documents/Project/14_Android/Property/app/src/main/AndroidManifest.xml:37:13-45
+67            android:exported="true" >
+67-->/Users/william/Documents/Project/14_Android/Property/app/src/main/AndroidManifest.xml:38:13-36
+68            <intent-filter>
+68-->/Users/william/Documents/Project/14_Android/Property/app/src/main/AndroidManifest.xml:39:13-43:29
+69                <action android:name="android.intent.action.MAIN" />
+69-->/Users/william/Documents/Project/14_Android/Property/app/src/main/AndroidManifest.xml:40:17-69
+69-->/Users/william/Documents/Project/14_Android/Property/app/src/main/AndroidManifest.xml:40:25-66
+70
+71                <category android:name="android.intent.category.LAUNCHER" />
+71-->/Users/william/Documents/Project/14_Android/Property/app/src/main/AndroidManifest.xml:42:17-77
+71-->/Users/william/Documents/Project/14_Android/Property/app/src/main/AndroidManifest.xml:42:27-74
+72            </intent-filter>
+73        </activity>
+74        <activity
+74-->/Users/william/Documents/Project/14_Android/Property/app/src/main/AndroidManifest.xml:45:9-47:40
+75            android:name="com.kkpip2022.property.activity.MainActivity"
+75-->/Users/william/Documents/Project/14_Android/Property/app/src/main/AndroidManifest.xml:46:13-50
+76            android:exported="false" />
+76-->/Users/william/Documents/Project/14_Android/Property/app/src/main/AndroidManifest.xml:47:13-37
+77        <activity
+77-->/Users/william/Documents/Project/14_Android/Property/app/src/main/AndroidManifest.xml:48:9-52:57
+78            android:name="com.kkpip2022.property.util.Capture"
+78-->/Users/william/Documents/Project/14_Android/Property/app/src/main/AndroidManifest.xml:49:13-41
+79            android:screenOrientation="portrait"
+79-->/Users/william/Documents/Project/14_Android/Property/app/src/main/AndroidManifest.xml:50:13-49
+80            android:stateNotNeeded="true"
+80-->/Users/william/Documents/Project/14_Android/Property/app/src/main/AndroidManifest.xml:51:13-42
+81            android:theme="@style/zxing_CaptureTheme" />
+81-->/Users/william/Documents/Project/14_Android/Property/app/src/main/AndroidManifest.xml:52:13-54
+82        <activity
+82-->[com.journeyapps:zxing-android-embedded:3.5.0] /Users/william/.gradle/caches/transforms-3/8bc7a597eda30428e1f1648602e201b3/transformed/jetified-zxing-android-embedded-3.5.0/AndroidManifest.xml:46:9-52:63
+83            android:name="com.journeyapps.barcodescanner.CaptureActivity"
+83-->[com.journeyapps:zxing-android-embedded:3.5.0] /Users/william/.gradle/caches/transforms-3/8bc7a597eda30428e1f1648602e201b3/transformed/jetified-zxing-android-embedded-3.5.0/AndroidManifest.xml:47:13-74
+84            android:clearTaskOnLaunch="true"
+84-->[com.journeyapps:zxing-android-embedded:3.5.0] /Users/william/.gradle/caches/transforms-3/8bc7a597eda30428e1f1648602e201b3/transformed/jetified-zxing-android-embedded-3.5.0/AndroidManifest.xml:48:13-45
+85            android:screenOrientation="sensorLandscape"
+85-->[com.journeyapps:zxing-android-embedded:3.5.0] /Users/william/.gradle/caches/transforms-3/8bc7a597eda30428e1f1648602e201b3/transformed/jetified-zxing-android-embedded-3.5.0/AndroidManifest.xml:49:13-56
+86            android:stateNotNeeded="true"
+86-->[com.journeyapps:zxing-android-embedded:3.5.0] /Users/william/.gradle/caches/transforms-3/8bc7a597eda30428e1f1648602e201b3/transformed/jetified-zxing-android-embedded-3.5.0/AndroidManifest.xml:50:13-42
+87            android:theme="@style/zxing_CaptureTheme"
+87-->[com.journeyapps:zxing-android-embedded:3.5.0] /Users/william/.gradle/caches/transforms-3/8bc7a597eda30428e1f1648602e201b3/transformed/jetified-zxing-android-embedded-3.5.0/AndroidManifest.xml:51:13-54
+88            android:windowSoftInputMode="stateAlwaysHidden" />
+88-->[com.journeyapps:zxing-android-embedded:3.5.0] /Users/william/.gradle/caches/transforms-3/8bc7a597eda30428e1f1648602e201b3/transformed/jetified-zxing-android-embedded-3.5.0/AndroidManifest.xml:52:13-60
+89
+90        <provider
+90-->[androidx.emoji2:emoji2:1.2.0] /Users/william/.gradle/caches/transforms-3/69e8195e0af1903606758bebf50c459d/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
+91            android:name="androidx.startup.InitializationProvider"
+91-->[androidx.emoji2:emoji2:1.2.0] /Users/william/.gradle/caches/transforms-3/69e8195e0af1903606758bebf50c459d/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:25:13-67
+92            android:authorities="com.kkpip2022.property.androidx-startup"
+92-->[androidx.emoji2:emoji2:1.2.0] /Users/william/.gradle/caches/transforms-3/69e8195e0af1903606758bebf50c459d/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:26:13-68
+93            android:exported="false" >
+93-->[androidx.emoji2:emoji2:1.2.0] /Users/william/.gradle/caches/transforms-3/69e8195e0af1903606758bebf50c459d/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:27:13-37
+94            <meta-data
+94-->[androidx.emoji2:emoji2:1.2.0] /Users/william/.gradle/caches/transforms-3/69e8195e0af1903606758bebf50c459d/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
+95                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+95-->[androidx.emoji2:emoji2:1.2.0] /Users/william/.gradle/caches/transforms-3/69e8195e0af1903606758bebf50c459d/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:30:17-75
+96                android:value="androidx.startup" />
+96-->[androidx.emoji2:emoji2:1.2.0] /Users/william/.gradle/caches/transforms-3/69e8195e0af1903606758bebf50c459d/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:31:17-49
+97            <meta-data
+97-->[androidx.lifecycle:lifecycle-process:2.4.1] /Users/william/.gradle/caches/transforms-3/a2a5ae00951a98f5c9bbf6406733a104/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:31:13-33:52
+98                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+98-->[androidx.lifecycle:lifecycle-process:2.4.1] /Users/william/.gradle/caches/transforms-3/a2a5ae00951a98f5c9bbf6406733a104/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:32:17-78
+99                android:value="androidx.startup" />
+99-->[androidx.lifecycle:lifecycle-process:2.4.1] /Users/william/.gradle/caches/transforms-3/a2a5ae00951a98f5c9bbf6406733a104/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:33:17-49
+100        </provider>
+101    </application>
+102
+103</manifest>
