@@ -20,6 +20,7 @@ import com.kkpip2022.property.api.TtitCallback;
 import com.kkpip2022.property.entity.CateListDetail;
 import com.kkpip2022.property.entity.CateListResponse;
 import com.kkpip2022.property.fragment.HomeFragment;
+import com.kkpip2022.property.fragment.LendFragment;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -63,72 +64,92 @@ public class CategoryDetail extends BaseActivity {
 
         // 绑定 ListView
         VerticalListView_lv = findViewById(R.id.cateItemDetail_listview);
+//
+//        // 设置适配器 Adapter
+//        DetailList_adapter = new SimpleAdapter(CategoryDetail.this, CateItem,
+//                R.layout.son_cate_detail, new String[]{"title", "totalNum"},
+//                new int[]{R.id.son_cate_title_tv, R.id.son_cate_total_tv});
+//
+//        // 设置适配器
+//        VerticalListView_lv.setAdapter(DetailList_adapter);
 
-        // 设置适配器 Adapter
-        DetailList_adapter = new SimpleAdapter(CategoryDetail.this,getData(),
-                R.layout.son_cate_detail,new String[]{"title","totalNum"},
-                new int[]{R.id.son_cate_title_tv,R.id.son_cate_total_tv});
-
-        // 设置适配器
-        VerticalListView_lv.setAdapter(DetailList_adapter);
+        new WorkThread().start();
 
     }
 
-    private List<Map<String, Object>> getData() {
-        // 需要考虑传参的问题，在 Version 1 中没有实质意义
-        HashMap<String,Object> params = new HashMap<>();
-        params.put("none","none");
+    Handler ReFreshhandler = new Handler() {
+        public void handleMessage(Message msg) {
+            if (msg.what == COMPLETED) {
+                Log.e("Here", "I am Here");
 
-        // 获取 网站地址
-        String BaseURL = GetStringSharedPreferencesContains(
-                SharedPreferenceDefault.SharedPreferenceSysConfName,
-                SharedPreferenceDefault.SharedPreferenceSysConfServerAdd
-        );
+                // 设置适配器 Adapter
+                DetailList_adapter = new SimpleAdapter(CategoryDetail.this, CateItem,
+                        R.layout.son_cate_detail, new String[]{"title", "totalNum"},
+                        new int[]{R.id.son_cate_title_tv, R.id.son_cate_total_tv});
 
-        // 获取 网站地址对应的 端口号
-        String ServerPort = GetStringSharedPreferencesContains(
-                SharedPreferenceDefault.SharedPreferenceSysConfName,
-                SharedPreferenceDefault.SharedPreferenceSysConfServerPort
-        );
+                // 设置适配器
+                VerticalListView_lv.setAdapter(DetailList_adapter);
+            }
+        }
+    };
 
-        // 传参部分代码
-        String ExtURL = "cateid=" + ( navigateGetIntVal() + 1 );
+    private class WorkThread extends Thread {
+        public void run() {
+            // 需要考虑传参的问题，在 Version 1 中没有实质意义
+            HashMap<String, Object> params = new HashMap<>();
+            params.put("none", "none");
 
-        Log.e("Request Number:",ExtURL);
+            // 获取 网站地址
+            String BaseURL = GetStringSharedPreferencesContains(
+                    SharedPreferenceDefault.SharedPreferenceSysConfName,
+                    SharedPreferenceDefault.SharedPreferenceSysConfServerAdd
+            );
 
-        Api.config(BaseURL, ServerPort, ApiConfig.GET_CATE_SON_ITEM, ExtURL, params).postRequest(new TtitCallback() {
-            @Override
-            public void onSuccess(String res) {
-                // 如果网络没有错误
-                Log.e("connection success:", res);
-                // 创建 Gson 方法
-                Gson gson = new Gson();
-                // 从返回值中获取 Data 数据
-                CateListResponse cateListResponse = gson.fromJson(res,CateListResponse.class);
-                // 返回的 getData 是一个列表
-                if (cateListResponse.getData() != null) {
-                    // 如果 data 有数据
-                    // 将 data 数据赋值给 ListData
-                    List<String> ListData = cateListResponse.getData();
-                    Log.e("This is List",String.valueOf(ListData));
-                    for (int i = 0; i < ListData.size(); i++) {
-                        String TempData = (String) String.valueOf(ListData.get(i));
-                        Log.e("Item",TempData);
-                        CateListDetail cateListDetail = gson.fromJson(TempData,CateListDetail.class);
-                        Map map = new HashMap();
-                        map.put("title",cateListDetail.getItemName());
-                        map.put("totalNum",cateListDetail.getQuantity());
-                        CateItem.add(map);
+            // 获取 网站地址对应的 端口号
+            String ServerPort = GetStringSharedPreferencesContains(
+                    SharedPreferenceDefault.SharedPreferenceSysConfName,
+                    SharedPreferenceDefault.SharedPreferenceSysConfServerPort
+            );
+
+            // 传参部分代码
+            String ExtURL = "cateid=" + (navigateGetIntVal() + 1);
+
+            Api.config(BaseURL, ServerPort, ApiConfig.GET_CATE_SON_ITEM, ExtURL, params).postRequest(new TtitCallback() {
+                @Override
+                public void onSuccess(String res) {
+                    // 如果网络没有错误
+                    Log.e("connection success:", res);
+                    // 创建 Gson 方法
+                    Gson gson = new Gson();
+                    // 从返回值中获取 Data 数据
+                    CateListResponse cateListResponse = gson.fromJson(res, CateListResponse.class);
+                    // 返回的 getData 是一个列表
+                    if (cateListResponse.getData() != null) {
+                        // 如果 data 有数据
+                        // 将 data 数据赋值给 ListData
+                        List<String> ListData = cateListResponse.getData();
+                        for (int i = 0; i < ListData.size(); i++) {
+                            String TempData = (String) String.valueOf(ListData.get(i));
+                            CateListDetail cateListDetail = gson.fromJson(TempData, CateListDetail.class);
+                            Map map = new HashMap();
+                            map.put("totalNum", cateListDetail.getQuantity());
+                            map.put("title", cateListDetail.getItemName());
+                            CateItem.add(map);
+                        }
+                        Log.e("This is CateLIST:", String.valueOf(CateItem));
+                        //处理完成后给handler发送消息
+                        Message msg = new Message();
+                        msg.what = COMPLETED;
+                        ReFreshhandler.sendMessage(msg);
                     }
                 }
-            }
 
-            @Override
-            public void onFailure(Exception e) {
+                @Override
+                public void onFailure(Exception e) {
 
-            }
-        });
-        return CateItem;
+                }
+            });
+
+        }
     }
-
 }
