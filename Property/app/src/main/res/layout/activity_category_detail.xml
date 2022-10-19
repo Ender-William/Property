@@ -26,12 +26,12 @@
             android:layout_weight="1"
             android:layout_height="match_parent"/>
 
-        <Button
-            android:id="@+id/cateItemDetail_delete_btn"
-            android:layout_width="@dimen/dimen_45dp"
-            android:layout_height="@dimen/dimen_45dp"
-            android:layout_marginRight="@dimen/dimen_10dp"
-            android:background="@drawable/del_blue"/>
+<!--        <Button-->
+<!--            android:id="@+id/cateItemDetail_delete_btn"-->
+<!--            android:layout_width="@dimen/dimen_45dp"-->
+<!--            android:layout_height="@dimen/dimen_45dp"-->
+<!--            android:layout_marginRight="@dimen/dimen_10dp"-->
+<!--            android:background="@drawable/del_blue"/>-->
 
         <Button
             android:id="@+id/cateItemDetail_add_btn"
@@ -71,6 +71,8 @@
         android:id="@+id/cateItemDetail_listview"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_marginLeft="@dimen/dimen_10dp"
+        android:layout_marginRight="@dimen/dimen_10dp"
         android:layout_weight="1">
 
     </ListView>

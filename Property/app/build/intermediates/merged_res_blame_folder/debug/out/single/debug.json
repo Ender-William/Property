@@ -52,6 +52,10 @@
         "source": "/Users/william/.gradle/daemon/7.3.3/com.kkpip2022.property.app-main-34:/mipmap-xhdpi/ic_launcher_foreground.png"
     },
     {
+        "merged": "com.kkpip2022.property.app-merged_res-32:/layout_fragment_return.xml.flat",
+        "source": "com.kkpip2022.property.app-main-34:/layout/fragment_return.xml"
+    },
+    {
         "merged": "/Users/william/.gradle/daemon/7.3.3/com.kkpip2022.property.app-merged_res-32:/layout_fragment_return.xml.flat",
         "source": "/Users/william/.gradle/daemon/7.3.3/com.kkpip2022.property.app-main-34:/layout/fragment_return.xml"
     },
@@ -162,10 +166,6 @@
     {
         "merged": "/Users/william/.gradle/daemon/7.3.3/com.kkpip2022.property.app-merged_res-32:/layout_category_name.xml.flat",
         "source": "/Users/william/.gradle/daemon/7.3.3/com.kkpip2022.property.app-main-34:/layout/category_name.xml"
-    },
-    {
-        "merged": "com.kkpip2022.property.app-merged_res-32:/layout_fragment_lend.xml.flat",
-        "source": "com.kkpip2022.property.app-main-34:/layout/fragment_lend.xml"
     },
     {
         "merged": "/Users/william/.gradle/daemon/7.3.3/com.kkpip2022.property.app-merged_res-32:/mipmap-hdpi_ic_launcher.png.flat",

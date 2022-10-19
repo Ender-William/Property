@@ -36,7 +36,7 @@ public class Welcome extends BaseActivity {
             @Override
             public void onClick(View view) {
                 navigateTo(Login.class,true);
-                // delayEndActivity(1000);
+                delayEndActivity(1000);
             }
         });
 
@@ -45,7 +45,7 @@ public class Welcome extends BaseActivity {
             @Override
             public void onClick(View view) {
                 navigateTo(Signup.class,true);
-                // delayEndActivity(1000);
+                delayEndActivity(1000);
             }
         });
 

@@ -41,8 +41,8 @@
             android:layout_marginBottom="@dimen/dimen_10dp"
             android:orientation="vertical">
 
-            <EditText
-                android:id="@+id/return_itemName_et"
+            <TextView
+                android:id="@+id/return_itemName_tv"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="2"
@@ -106,6 +106,7 @@
             android:gravity="center_vertical|left"/>
 
         <TextView
+            android:id="@+id/return_father_cate_tv"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="@dimen/dimen_50dp"
@@ -149,6 +150,7 @@
             android:gravity="center_vertical|center"/>
 
         <EditText
+            android:id="@+id/return_return_num_et"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="@dimen/dimen_50dp"
@@ -160,14 +162,6 @@
             android:gravity="right"
             android:textColorHint="@color/light_gray"
             android:layout_gravity="center_vertical|left"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="@dimen/dimen_50dp"
-            android:layout_gravity="center_vertical"
-            android:text="/0000"
-            android:fontFamily="@font/en_blod"
-            android:textSize="@dimen/dimen_30sp"/>
 
     </LinearLayout>
 
@@ -198,6 +192,7 @@
             android:textSize="@dimen/dimen_25sp"/>
 
         <Button
+            android:id="@+id/return_confirm_btn"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="@dimen/dimen_70dp"

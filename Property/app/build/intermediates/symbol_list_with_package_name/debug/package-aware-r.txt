@@ -2776,7 +2776,6 @@ id cancel_button
 id carryVelocity
 id cateItemDetail_add_btn
 id cateItemDetail_back_btn
-id cateItemDetail_delete_btn
 id cateItemDetail_listview
 id category_layout
 id center
@@ -3042,8 +3041,11 @@ id progress_horizontal
 id radio
 id ratio
 id rectangles
-id return_itemName_et
+id return_confirm_btn
+id return_father_cate_tv
+id return_itemName_tv
 id return_qrScan_btn
+id return_return_num_et
 id reverseSawtooth
 id right
 id rightToLeft

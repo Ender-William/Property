@@ -91,7 +91,6 @@ id ServerConf_title_tv
 id Signup_title_tv
 id cateItemDetail_add_btn
 id cateItemDetail_back_btn
-id cateItemDetail_delete_btn
 id cateItemDetail_listview
 id category_layout
 id home_cate_hsv
@@ -112,8 +111,11 @@ id login_serverConf_btn
 id login_title_tv
 id login_username_et
 id login_username_tv
-id return_itemName_et
+id return_confirm_btn
+id return_father_cate_tv
+id return_itemName_tv
 id return_qrScan_btn
+id return_return_num_et
 id serverconf_port_et
 id serverconf_port_tv
 id serverconf_serveraddr_et
