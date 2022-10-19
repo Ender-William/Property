@@ -1,5 +1,6 @@
 package com.kkpip2022.property.fragment;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -60,6 +61,7 @@ public class LendFragment extends BaseFragment {
         return fragment;
     }
 
+    @SuppressLint("HandlerLeak")
     Handler ReFreshhandler = new Handler() {
         public void handleMessage(Message msg) {
             if (msg.what == COMPLETED) {
@@ -70,6 +72,7 @@ public class LendFragment extends BaseFragment {
         }
     };
 
+    @SuppressLint("HandlerLeak")
     Handler ReFreshFNhandler = new Handler() {
         public void handleMessage(Message msg) {
             if (msg.what == COMPLETED) {
@@ -100,8 +103,10 @@ public class LendFragment extends BaseFragment {
             public void onClick(View view) {
                 // 初始化 intent integrator
                 IntentIntegrator intentIntegrator = IntentIntegrator.forSupportFragment(LendFragment.this);
+                // 设置扫码类型，其中 QR_CODE_TYPES 表示二维码，ONE_D_CODE_TYPES 表示条形码
+                intentIntegrator.setDesiredBarcodeFormats(IntentIntegrator.ONE_D_CODE_TYPES);
                 // 设置扫描界面的提示词
-                intentIntegrator.setPrompt("For Flash use volume up key");
+                intentIntegrator.setPrompt("按下音量上键以开启闪光灯");
                 // 设置蜂鸣器效果
                 intentIntegrator.setBeepEnabled(true);
                 // 停止界面旋转

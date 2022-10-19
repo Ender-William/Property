@@ -2,6 +2,7 @@ package com.kkpip2022.property.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -77,6 +78,7 @@ public class CategoryDetail extends BaseActivity {
 
     }
 
+    @SuppressLint("HandlerLeak")
     Handler ReFreshhandler = new Handler() {
         public void handleMessage(Message msg) {
             if (msg.what == COMPLETED) {
