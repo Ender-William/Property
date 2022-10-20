@@ -9,6 +9,8 @@ const { getUserInfoDetail,
 const {searchSN} = require("../controllers/SnSearchController");
 const {getCateName} = require("../controllers/GetCateNameController");
 const {takeout} = require("../controllers/TakeOutController");
+const {returnin} = require("../controllers/ReturninController");
+const {getHistory} = require("../controllers/GetHistoryController");
 const handleProcessRoute = (req, res) => {
     // 定义处理路由的逻辑
 
@@ -121,6 +123,27 @@ const handleProcessRoute = (req, res) => {
             return new SuccessModel(listData);
         })
     }
+
+    if (method === 'POST' && req.path === '/api/returnin') {
+        // /api/returnin?sn={sn}&num={num}&stuID={stuID}
+        const sn = req.query.sn || '';
+        const num = req.query.num || '';
+        const stuID = req.query.stuID || '';
+        const listDataPromise = returnin(sn,num,stuID);
+        return listDataPromise.then((listData) => {
+            return new SuccessModel(listData);
+        })
+    }
+
+    if (method === 'POST' && req.path === '/api/gethistory') {
+        // /api/gethistory?stuID={stuID}
+        const stuID = req.query.stuID || '';
+        const listDataPromise = getHistory(stuID);
+        return listDataPromise.then((listData) => {
+            return new SuccessModel(listData);
+        })
+    }
+
 }
 
 module.exports = handleProcessRoute;

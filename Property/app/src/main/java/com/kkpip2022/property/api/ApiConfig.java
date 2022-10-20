@@ -13,4 +13,5 @@ public class ApiConfig {
     public static final String GET_FATHER_NAME = "/api/getcatename?";
     public static final String TAKE_OUT = "/api/takeout?";
     public static final String RETURN_IN = "/api/returnin?";
+    public static final String GET_HISTORY = "/api/gethistory?";
 }

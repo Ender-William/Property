@@ -86,7 +86,7 @@
     <!--  Me Page  -->
     <string name="Me_Title">个人中心</string>
     <string name="Me_NotReturn">尚未归还</string>
-    <string name="Me_OperateRecode">历史记录</string>
+    <string name="Me_OperateRecode">借出记录</string>
     <string name="Me_Preference">更多设置</string>
 
 </resources>

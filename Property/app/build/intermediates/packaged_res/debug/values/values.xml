@@ -67,7 +67,7 @@
     <string name="LoginPage_title">登录</string>
     <string name="LoginPage_username">用户名</string>
     <string name="Me_NotReturn">尚未归还</string>
-    <string name="Me_OperateRecode">历史记录</string>
+    <string name="Me_OperateRecode">借出记录</string>
     <string name="Me_Preference">更多设置</string>
     <string name="Me_Title">个人中心</string>
     <string name="Operate_ConfirmOperate">确认</string>

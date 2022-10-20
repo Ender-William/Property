@@ -18,4 +18,7 @@ public class SharedPreferenceDefault {
     // 系统配置 SP 中 用于保存用户账号ID的变量名
     public static final String SharedPreferenceSysConfigLoginStuID = "sysLoginStuID";
 
+    // 系统配置 SP 重 用于保存用户账号姓名的变量名
+    public static final String SharedPreferenceSysConfigLoginName = "sysLoginName";
+
 }

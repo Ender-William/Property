@@ -128,7 +128,7 @@ public class CategoryDetail extends BaseActivity {
                     // 返回的 getData 是一个列表
                     if (cateListResponse.getData() != null) {
                         // 如果 data 有数据
-                        // 将 data 数据赋值给 ListData
+                        // 将 data 数据赋值给 != nListData
                         List<String> ListData = cateListResponse.getData();
                         for (int i = 0; i < ListData.size(); i++) {
                             String TempData = (String) String.valueOf(ListData.get(i));

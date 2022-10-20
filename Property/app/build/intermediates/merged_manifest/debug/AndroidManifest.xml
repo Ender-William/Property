@@ -48,6 +48,9 @@
         android:theme="@style/Theme.Property"
         android:usesCleartextTraffic="true" >
         <activity
+            android:name="com.kkpip2022.property.activity.history_operate"
+            android:exported="false" />
+        <activity
             android:name="com.kkpip2022.property.activity.CategoryDetail"
             android:exported="false" />
         <activity
