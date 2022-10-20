@@ -1,6 +1,6 @@
 // 加载 http 库文件
 const http = require('http');
-// 开启服务器异步成像，异步程序由 app.js 文件开始
+// 开启服务器异步程序，异步程序由 app.js 文件开始
 const serverHandler = require('../app');
 
 // 监听端口

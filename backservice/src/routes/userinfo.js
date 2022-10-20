@@ -4,16 +4,15 @@ const { login } = require('../controllers/LoginController');
 const { register} = require('../controllers/RegisterController');
 const { finduser } = require('../controllers/FinduserController');
 const { getCateSon } = require('../controllers/GetSonCateItemController');
-const { getUserInfoDetail,
-    getAllUserEmail, getCateInfo} = require('../controllers/process');
+const { getUserInfoDetail, getAllUserEmail, getCateInfo} = require('../controllers/process');
 const {searchSN} = require("../controllers/SnSearchController");
 const {getCateName} = require("../controllers/GetCateNameController");
 const {takeout} = require("../controllers/TakeOutController");
 const {returnin} = require("../controllers/ReturninController");
 const {getHistory} = require("../controllers/GetHistoryController");
+
 const handleProcessRoute = (req, res) => {
     // 定义处理路由的逻辑
-
     const method = req.method;
 
     // 登录处理
@@ -34,7 +33,6 @@ const handleProcessRoute = (req, res) => {
     // 查找用户名
     if (method === 'POST' && req.path ==='/api/finduser') {
         const stuID = req.query.stuID || '';
-
         const listDataPromise = finduser(stuID);
         return listDataPromise.then((listData) => {
             // console.log(listData);

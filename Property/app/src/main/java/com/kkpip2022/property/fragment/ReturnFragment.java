@@ -153,8 +153,6 @@ public class ReturnFragment extends BaseFragment {
 
                     }
                 });
-
-
             }
         });
 

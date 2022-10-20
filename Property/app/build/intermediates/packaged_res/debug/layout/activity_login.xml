@@ -78,7 +78,6 @@
         android:fontFamily="@font/en_blod"
         android:textColor="@color/ice_deep"
         android:textSize="@dimen/dimen_20sp"
-        android:text="1111"
         android:maxLines="1"
         android:inputType="number"
         app:layout_constraintBottom_toTopOf="@+id/login_password_tv" />
@@ -106,7 +105,6 @@
         android:fontFamily="@font/en_blod"
         android:textColor="@color/ice_deep"
         android:textSize="@dimen/dimen_20sp"
-        android:text="admin"
         android:maxLines="1"
         android:inputType="textPassword"
         app:layout_constraintBottom_toTopOf="@+id/login_login_btn" />
