@@ -126,6 +126,7 @@ public class Login extends BaseActivity {
                     // 已注销的账号不能登录，需要返回一个提示
                     String LoginResponse_stuID = String.valueOf(loginResponse.getData().getStuID());
                     String LoginResponse_passwd = loginResponse.getData().getPasswd();
+                    String LoginResponse_name = loginResponse.getData().getStuname();
                     int LoginResponse_state = loginResponse.getData().getState();
                     // showToastSync(res);
                     if (Objects.equals(LoginResponse_stuID,stuID)
@@ -145,6 +146,13 @@ public class Login extends BaseActivity {
                                 SharedPreferenceDefault.SharedPreferenceSysConfName,
                                 SharedPreferenceDefault.SharedPreferenceSysConfLoginState,
                                 LoginResponse_state
+                        );
+
+                        // 将登录状态保存到 SharedPreference 的 sysLoginState 当中
+                        SaveStringToSharedPreferences(
+                                SharedPreferenceDefault.SharedPreferenceSysConfName,
+                                SharedPreferenceDefault.SharedPreferenceSysConfigLoginName,
+                                LoginResponse_name
                         );
 
                         // showToastSync(getString(R.string.Warning_loginSuccess));

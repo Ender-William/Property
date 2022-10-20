@@ -93,6 +93,9 @@ id cateItemDetail_add_btn
 id cateItemDetail_back_btn
 id cateItemDetail_listview
 id category_layout
+id history_history_lv
+id historydetail_itemName_tv
+id historydetail_num_tv
 id home_cate_hsv
 id home_horizontalListView
 id home_title_tv
@@ -111,6 +114,9 @@ id login_serverConf_btn
 id login_title_tv
 id login_username_et
 id login_username_tv
+id me_history_ibtn
+id me_name_tv
+id me_stuid_tv
 id return_confirm_btn
 id return_father_cate_tv
 id return_itemName_tv
@@ -143,6 +149,7 @@ id welcome_serverConf_btn
 id welcome_signup_btn
 id welcome_title_tv
 layout activity_category_detail
+layout activity_history_operate
 layout activity_home
 layout activity_login
 layout activity_main
@@ -154,6 +161,7 @@ layout fragment_home
 layout fragment_lend
 layout fragment_me
 layout fragment_return
+layout history_operate_detail
 layout other_userinfo
 layout son_cate_detail
 mipmap arrows_right

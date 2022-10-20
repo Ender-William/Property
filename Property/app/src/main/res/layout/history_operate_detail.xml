@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_marginLeft="@dimen/dimen_10dp"
+    android:layout_marginRight="@dimen/dimen_10dp"
+    android:layout_marginTop="@dimen/dimen_10dp"
+    android:layout_height="@dimen/dimen_70dp"
+    android:orientation="horizontal"
+    >
+    
+    <TextView
+        android:id="@+id/historydetail_itemName_tv"
+        android:layout_width="0dp"
+        android:layout_weight="2"
+        android:layout_height="@dimen/dimen_60dp"
+        android:fontFamily="@font/en_blod"
+        android:text="12345"
+        android:textColor="@color/ice_deep"
+        android:textSize="@dimen/dimen_30sp"
+        android:gravity="center_vertical"/>
+
+    <TextView
+        android:id="@+id/historydetail_num_tv"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="@dimen/dimen_60dp"
+        android:fontFamily="@font/en_blod"
+        android:text="12345"
+        android:textColor="@color/ice_deep"
+        android:textSize="@dimen/dimen_30sp"
+        android:gravity="center_vertical|right"/>
+
+
+
+
+</LinearLayout>

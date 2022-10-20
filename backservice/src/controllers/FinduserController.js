@@ -6,7 +6,7 @@ const finduser = (stuID) => {
     if (stuID) {
         sql += ` stuID='${stuID}'`;
     }
-    sqlresult = execSQL(sql);
+    sqlresult = (sql);
     if (sqlresult) {
         sqlresult.then((data) => {
             console.log(data);

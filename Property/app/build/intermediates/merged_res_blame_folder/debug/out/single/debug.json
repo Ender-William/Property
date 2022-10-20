@@ -28,6 +28,10 @@
         "source": "/Users/william/.gradle/daemon/7.3.3/com.kkpip2022.property.app-main-34:/mipmap-xxhdpi/user_fire.png"
     },
     {
+        "merged": "com.kkpip2022.property.app-merged_res-32:/layout_activity_history_operate.xml.flat",
+        "source": "com.kkpip2022.property.app-main-34:/layout/activity_history_operate.xml"
+    },
+    {
         "merged": "/Users/william/.gradle/daemon/7.3.3/com.kkpip2022.property.app-merged_res-32:/font_en_slim.ttf.flat",
         "source": "/Users/william/.gradle/daemon/7.3.3/com.kkpip2022.property.app-main-34:/font/en_slim.ttf"
     },
@@ -50,10 +54,6 @@
     {
         "merged": "/Users/william/.gradle/daemon/7.3.3/com.kkpip2022.property.app-merged_res-32:/mipmap-xhdpi_ic_launcher_foreground.png.flat",
         "source": "/Users/william/.gradle/daemon/7.3.3/com.kkpip2022.property.app-main-34:/mipmap-xhdpi/ic_launcher_foreground.png"
-    },
-    {
-        "merged": "com.kkpip2022.property.app-merged_res-32:/layout_fragment_return.xml.flat",
-        "source": "com.kkpip2022.property.app-main-34:/layout/fragment_return.xml"
     },
     {
         "merged": "/Users/william/.gradle/daemon/7.3.3/com.kkpip2022.property.app-merged_res-32:/layout_fragment_return.xml.flat",
@@ -244,6 +244,10 @@
         "source": "/Users/william/.gradle/daemon/7.3.3/com.kkpip2022.property.app-main-34:/layout/activity_home.xml"
     },
     {
+        "merged": "/Users/william/.gradle/daemon/7.3.3/com.kkpip2022.property.app-merged_res-32:/layout_history_operate_detail.xml.flat",
+        "source": "/Users/william/.gradle/daemon/7.3.3/com.kkpip2022.property.app-main-34:/layout/history_operate_detail.xml"
+    },
+    {
         "merged": "/Users/william/.gradle/daemon/7.3.3/com.kkpip2022.property.app-merged_res-32:/mipmap-hdpi_ic_launcher_foreground.png.flat",
         "source": "/Users/william/.gradle/daemon/7.3.3/com.kkpip2022.property.app-main-34:/mipmap-hdpi/ic_launcher_foreground.png"
     },
@@ -254,6 +258,10 @@
     {
         "merged": "/Users/william/.gradle/daemon/7.3.3/com.kkpip2022.property.app-merged_res-32:/layout_activity_welcome.xml.flat",
         "source": "/Users/william/.gradle/daemon/7.3.3/com.kkpip2022.property.app-main-34:/layout/activity_welcome.xml"
+    },
+    {
+        "merged": "/Users/william/.gradle/daemon/7.3.3/com.kkpip2022.property.app-merged_res-32:/layout_activity_history_operate.xml.flat",
+        "source": "/Users/william/.gradle/daemon/7.3.3/com.kkpip2022.property.app-main-34:/layout/activity_history_operate.xml"
     },
     {
         "merged": "/Users/william/.gradle/daemon/7.3.3/com.kkpip2022.property.app-merged_res-32:/mipmap-hdpi_ic_launcher_round.png.flat",

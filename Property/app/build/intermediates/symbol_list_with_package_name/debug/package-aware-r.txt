@@ -2891,6 +2891,9 @@ id groups
 id guideline
 id header_title
 id hideable
+id history_history_lv
+id historydetail_itemName_tv
+id historydetail_num_tv
 id home
 id homeAsUp
 id home_cate_hsv
@@ -2963,6 +2966,9 @@ id material_timepicker_ok_button
 id material_timepicker_view
 id material_value_index
 id matrix
+id me_history_ibtn
+id me_name_tv
+id me_stuid_tv
 id media_actions
 id message
 id middle
@@ -3322,6 +3328,7 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_category_detail
+layout activity_history_operate
 layout activity_home
 layout activity_login
 layout activity_main
@@ -3349,6 +3356,7 @@ layout fragment_home
 layout fragment_lend
 layout fragment_me
 layout fragment_return
+layout history_operate_detail
 layout layout_tab
 layout layout_tab_bottom
 layout layout_tab_left

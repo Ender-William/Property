@@ -22,7 +22,7 @@ public class LoginResponse {
     public static class dataBean{
         private int stuID;
         private String passwd;
-        private String name;
+        private String stuname;
         private String email;
         private String authority;
         private int state;
@@ -41,11 +41,11 @@ public class LoginResponse {
             this.passwd = passwd;
         }
 
-        public String getName() {
-            return name;
+        public String getStuname() {
+            return stuname;
         }
-        public void setName(String name) {
-            this.name = name;
+        public void setStuname(String stuname) {
+            this.stuname = stuname;
         }
 
         public String getEmail() {

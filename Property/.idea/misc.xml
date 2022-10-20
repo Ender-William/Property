@@ -6,6 +6,7 @@
         <entry key="../../../../../../layout/custom_preview.xml" value="0.13958964009418096" />
         <entry key="app/src/main/res/layout/activity_category_detai.xml" value="0.4166666666666667" />
         <entry key="app/src/main/res/layout/activity_category_detail.xml" value="0.15" />
+        <entry key="app/src/main/res/layout/activity_history_operate.xml" value="0.221875" />
         <entry key="app/src/main/res/layout/activity_home.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_server_conf.xml" value="0.3592592592592593" />
@@ -18,6 +19,8 @@
         <entry key="app/src/main/res/layout/fragment_me.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_operate.xml" value="0.1828774062816616" />
         <entry key="app/src/main/res/layout/fragment_return.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/history_operate.xml" value="0.20330374272277893" />
+        <entry key="app/src/main/res/layout/history_operate_detail.xml" value="0.22083333333333333" />
         <entry key="app/src/main/res/layout/lend_return.xml" value="0.33" />
         <entry key="app/src/main/res/layout/other_userinfo.xml" value="0.2373353596757852" />
         <entry key="app/src/main/res/layout/son_cate_detail.xml" value="0.331036376953125" />
@@ -25,7 +28,7 @@
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_16" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_16_PREVIEW" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
