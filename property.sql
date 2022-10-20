@@ -11,7 +11,7 @@
  Target Server Version : 80023
  File Encoding         : 65001
 
- Date: 20/10/2022 09:13:11
+ Date: 21/10/2022 01:04:34
 */
 
 SET NAMES utf8mb4;
@@ -120,7 +120,7 @@ CREATE TABLE `lendTB` (
   `loanQuantity` int DEFAULT NULL,
   `operateDate` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`lendOperateCode`,`sn`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- ----------------------------
 -- Records of lendTB
@@ -131,6 +131,8 @@ INSERT INTO `lendTB` VALUES (2, 1111, 'JavaWeb', '9787302441717', 2, '1666077106
 INSERT INTO `lendTB` VALUES (3, 1111, 'Java_Web', '9787302441717', 2, '1666079582448');
 INSERT INTO `lendTB` VALUES (4, 1111, 'Java_Web', '9787302441717', 1, '1666081400376');
 INSERT INTO `lendTB` VALUES (5, 1111, '金华清感', '6923902216000', 15, '1666181537306');
+INSERT INTO `lendTB` VALUES (6, 1111, 'Java_Web', '9787302441717', 1, '1666284842512');
+INSERT INTO `lendTB` VALUES (7, 1111, 'Java_Web', '9787302441717', 2, '1666284852714');
 COMMIT;
 
 -- ----------------------------
@@ -146,7 +148,7 @@ CREATE TABLE `returnTB` (
   `lendOperateCode` int DEFAULT NULL,
   `operateDate` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`returnOperateCode`,`sn`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- ----------------------------
 -- Records of returnTB
@@ -157,6 +159,7 @@ INSERT INTO `returnTB` VALUES (2, 1111, '金华清感', '6923902216000', 10, 1, 
 INSERT INTO `returnTB` VALUES (3, 1111, '金华清感', '6923902216000', 10, 1, '1666182127239');
 INSERT INTO `returnTB` VALUES (4, 1111, '金华清感', '6923902216000', 20, 1, '1666182536030');
 INSERT INTO `returnTB` VALUES (5, 1111, '金华清感', '6923902216000', 20, 1, '1666182552163');
+INSERT INTO `returnTB` VALUES (6, 1111, 'Java_Web', '9787302441717', 3, 1, '1666284868106');
 COMMIT;
 
 -- ----------------------------
